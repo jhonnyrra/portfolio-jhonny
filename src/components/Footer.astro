@@ -1,0 +1,45 @@
+---
+import X from './icons/X.astro';
+import Github from './icons/Github.astro';
+import Linkedin from './icons/Linkedin.astro';
+import StackOF from './icons/StackOF.astro';
+import Line from './Line.astro';
+
+const iconsItem = [
+    {
+        alt: "Logo from X, before Twitter",
+        Component: X,
+    },
+    {
+        alt: "Logo from github",
+        Component: Github,
+    },
+    {
+        alt: "Logo from linkedin",
+        Component: Linkedin,
+    },
+    {
+        alt: "Logo from stack overflow",
+        Component: StackOF,
+    },
+]
+---
+<article class="bg-secondary lg:w-3/4 lg:m-auto">
+    <Line class="w-8 sm:w-11 lg:w-64"  >{8}</Line>
+    <ul class="flex flex-row gap-4 justify-center pt-12 relative bottom-16">
+        {
+            iconsItem.map(({alt, Component}) =>(
+                <li>
+                    <Component 
+                        alt= {alt}  
+                        class="fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
+                    />
+                </li>
+            ))
+        }
+    </ul>
+    <Line class="w-8 sm:w-11 lg:w-64" />
+    <!-- <slot name="after" /> -->
+    <h2 class="text-skin text-base">"Thanks for Scrolling"</h2>
+    <h2 class="text-skin text-base">© 2024 midudev. Casi todos los derechos reservados</h2>
+</article>

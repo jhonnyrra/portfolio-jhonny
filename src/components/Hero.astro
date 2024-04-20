@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import pictures from '../../public/pictures.png';
+import Button from './Button.astro';
+---
+<main class="flex flex-col justify-center sm:flex-row lg:w-3/4">
+    <!-- <main class="flex flex-col md:flex-row bg-[url('../../public/pictures.png')]"> -->
+    <div class="m-auto pt-10 p-2 flex-initial max-w-md sm:p-0 sm:flex-auto sm:w-3/4 sm:pt-28 lg:relative lg:left-28">
+        <h1 class="text-xl mb-3 p-3 text-center sm:text-2xl sm:text-left lg:text-4xl">I´M <span class="text-skin text-4xl sm:text-6xl lg:text-7xl">Jhonny Urueña</span></h1>
+        <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl"><span class="text-skin">+</span>5 years of experience as a <span class="text-skin">software developer "Backend and Frontend"</span>. Track record in creating high performance websites tailored to customer
+            needs.</p>
+        <Button>Contact Me</Button>
+    </div>
+    <div class="m-auto sm:right-0 sm:absolute lg:right-80">
+        <Image src={pictures} 
+            alt="A picture to Jhonny Urueña." 
+            width="400" 
+            height="400" 
+            class="w-60 h-64 sm:w-[400px] sm:h-[450px] lg:w-[600px] lg:h-[700px]"
+        />
+    </div>
+</main>

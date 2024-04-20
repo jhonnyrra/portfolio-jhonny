@@ -1,23 +1,92 @@
 ---
+import Container from '../components/Container.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link href="https://fonts.cdnfonts.com/css/diediedie" rel="stylesheet">
+		<!-- 
+			But! this link is only for christmas!! 
+			font-family: 'WinterNight DB', sans-serif;
+		-->
+		<link href="https://fonts.cdnfonts.com/css/winternight" rel="stylesheet">
+		<!-- 
+			But! this link is only for hellowen!! 
+			font-family: 'Magnificent Nightmare', sans-serif;
+			font-family: 'Pumpkins Nightmare', sans-serif;
+		-->
+		<link href="https://fonts.cdnfonts.com/css/magnificent-nightmare" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/pumpkins-nightmare" rel="stylesheet">
+		<!-- 
+			But! this link is only for hellowen!! 
+			font-family: 'Magnificent Nightmare', sans-serif;
+			font-family: 'Pumpkins Nightmare', sans-serif;
+		-->
+		<link href="https://fonts.cdnfonts.com/css/cartoon-network-blocks" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/cartoon-blocks-christmas-sc?styles=22170,22171" rel="stylesheet">
+		<!-- 
+			This is //What am I up to? 
+			font-family: 'KBTheLittleFella', sans-serif;                                        
+		-->
+		<link href="https://fonts.cdnfonts.com/css/kbthelittlefella" rel="stylesheet">
+                
+
+		<link href="https://fonts.cdnfonts.com/css/bobloxclassic" rel="stylesheet">
+
+		<link href="https://fonts.cdnfonts.com/css/krona-one" rel="stylesheet">
+
+		<link href="https://fonts.cdnfonts.com/css/quark-2" rel="stylesheet">
+		<!-- 
+			This is //Logo? 
+			font-family: 'Quark', sans-serif;
+        	font-family: 'Quark Outline', sans-serif;
+		-->
+                
+		<!-----------------------------
+				`    ``               `
+				``  _ `      `       ``
+				`   |_| `  `` ``    `  `
+				``  -___-_` `   ` --------------
+			``   /      )      | This is fine |`
+			`____/| (0) (0)_()  |/-------------  `
+			/|   | |   ^____)      ``      ``
+			||   |_|    \_//     Uɔ````   `` ``
+			||    || |    |    ========`  ``  ``
+			||    || |    |      ||     ``   `
+			||     \\_\   |\     ||   ```    `
+			=========||====||    ||  ``       `
+			|| ||   \Ɔ || \Ɔ   ||   ``    ``
+			|| ||      ||      ||  `     ``
+
+
+					TO DO
+				* Hover Buttom
+				* Arrow up
+				* Select text change color
+				* Change langauge and background
+		--------------------------------->
 		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="w-screen mx-auto bg-primary text-black dark:text-white">
+		<Header /> 
+		<Container>
+			<slot>MeansWhile charge...</slot>
+		</Container>
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -49,3 +118,43 @@ const { title } = Astro.props;
 			monospace;
 	}
 </style>
+
+
+<!-- Explicación:
+
+1* El Usuario inicia el proceso de compra 
+   o pedido en la aplicación.
+2* El Plugin accede a dos puntos de datos 
+   proporcionados por el Usuario durante 
+   el proceso de check-out.
+3* El Plugin consulta el Primer Endpoint 
+   en la Base de Datos para verificar 
+   la puntuación del Usuario.
+4* Si la puntuación es igual o superior 
+   a X (indicando una buena puntuación), 
+   se procede con la creación del pedido/compra.
+5* Si la puntuación es menor que X, se 
+   envía una notificación al Usuario 
+   solicitando que cambie el método de pago.
+6* La App de Tercero (Dropi) registra 
+   la entrega o no entrega del pedido.
+7* La información sobre la entrega se 
+   actualiza en la Base de Datos según 
+   lo registrado por la App de Tercero.
+
+   Explicación:
+
+✔ La tabla "Usuario" almacena información 
+sobre los usuarios de la aplicación, como 
+su identificador único (id_usuario), 
+nombre, email y otros datos relevantes.
+✔ La tabla "Puntuacion" registra la 
+puntuación de los usuarios, donde cada 
+puntuación tiene un identificador 
+único (id_puntuacion) y un valor asociado.
+✔ La tabla "Pedido/Compra" contiene 
+información sobre los pedidos o compras 
+realizadas por los usuarios. Cada 
+pedido tiene un identificador único 
+(id_pedido) y está asociado a un usuario 
+a través de su id_usuario. -->
