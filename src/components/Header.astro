@@ -1,79 +1,75 @@
 ---
 import Logo from './icons/Logo.astro';
+import ThemeToggle from "./ThemeToggle.astro"
 
 const navItems = [
     {
-        title: "Sobre mí",
-        label: "sobre-mi",
-        url: "/#sobre-mi",
+        title: "About Me",
+        label: "about-me",
+        url: "/#sabout-me",
     },
     {
-        title: "Proyectos",
-        label: "proyectos",
-        url: "/#proyectos",
+        title: "Proyects",
+        label: "proyects",
+        url: "/#proyects",
     },
     {
-        title: "Experiencia",
-        label: "experiencia",
-        url: "/#experiencia",
+        title: "Experience",
+        label: "experience",
+        url: "/#experience",
     },
     {
-        title: "Contacto",
-        label: "contacto",
+        title: "Contact",
+        label: "contact",
         url: "mailto:jhonnyrra@gmail.com",
     },
 ]
 ---
 
-<div class="containerNav mx-auto w-full md:w-5/6">
-    <a href="/">
+<div class="containerNav top-0 h-15 z-50 flex justify-between sticky sm:rounded-full sm:top-1 sm:m-auto sm:w-11/12 lg:max-w-screen-xl">
+        <!-- /* padding: 20px 0px 20px 0px; */ -->
+    <a href="#top" role="link" title="Know me more!">
         <!-- <Image src={logo} alt="A bird sitting on a nest of eggs." width="40" height="40" /> -->
-        <Logo class="w-14 h-14 pt-6 sm:w-20 sm:h-20"/>
+        <Logo class="relative w-14 h-14 left-5 sm:absolute sm:left-1/10 sm:top-2.5 lg:top-0 lg:w-20 lg:h-20 lg:left-10" />
     </a>
-    <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center">
+    <nav class="m-auto flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 relative top-2">
     {
         navItems.map((link) => (
-            <div class="hidden sm:block">
+            <div class="hidden sm:block sm:pb-5">
                 <a
                     class="relative block px-2 py-4 text-base transition hover:text-yellow-500 dark:hover:text-skin lg:text-xl"
                     aria-label={link.label}
                     href={link.url}
-                    >
+                >
                     {link.title}
                 </a>
             </div>
         ))
     }
+    <ThemeToggle />
     </nav>
     <!-- <ThemeToggle /> Comming soon -->
-    <label for="check" class="block sm:hidden">
-        <input type="checkbox" id="check"/> 
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
+    <div class="p-4 sm:hidden">
+        <label for="check" class="block sm:hidden">
+            <input type="checkbox" id="check"/> 
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
 </div>
 
+
+<!-- TODO: cash the first div only and remplace for .containerNava, then change this class for tailwind elements! -->
 <style>
     .containerNav {
-        z-index: 100;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 30px;
-        height: 37px;
-        position:sticky;
-        top: 0;
-        left: 0;
-        width: 100%;
-        margin: auto;
         animation: enhance-header linear both;
         animation-timeline: scroll(root block);
         animation-range: 0 200px;
     }
     @keyframes enhance-header {
         to {
-            background: rgb(255, 255, 255, .4);
+            background: rgb(240, 191, 108, .4);
             backdrop-filter: blur(5px);
         }
     }

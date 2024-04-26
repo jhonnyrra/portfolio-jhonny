@@ -1,0 +1,72 @@
+---
+import Mail from './icons/Mail.astro';
+import Location from './icons/Location.astro';
+import Linkedin from './icons/Linkedin.astro';
+import Line from './Line.astro';
+import Card from './Card.astro';
+import { any } from 'astro/zod';
+
+const iconsItem = [
+    {
+        alt: "Mail icon",
+        src: "mailto:jhonnyrra@gmail.com",
+        title: "jhonnyrra@gmail.com",
+        Component: Mail,
+    },
+    {
+        alt: "linkedin icon",
+        src: "https://www.linkedin.com/in/jhonny-israel-urue%C3%B1a-hernandez/",
+        title: "Linkedin",
+        Component: Linkedin,
+    },
+    {
+        alt: "Location icon",
+        src: "",
+        title: "Cali, Colombia",
+        Component: Location,
+    },
+]
+---
+
+<article class="bg-primary w-full m-auto lg:max-w-screen-xl">
+    <div class="flex flex-row gap-4 justify-center pt-12 relative bottom-16">
+        <Line class="absolute left-0 w-1/5 mt-3.5 sm:w-1/4 lg:w-2/6" />
+        <h1 class="text-white relative bottom-1.5 text-center font-sans font-semibold text-3xl sm:bottom-3.5 sm:text-5xl lg:text-6xl lg:bottom-5" >Contact Me</h1>
+        <Line class="absolute right-0 w-1/5 mt-3.5 sm:w-1/4 lg:w-2/6" />
+    </div>
+    <ul class="flex flex-row gap-4 justify-center pt-12 relative bottom-16">
+        {
+            iconsItem.map(({alt, src, title, Component}) =>(
+                <li>
+                    <a
+                        href={src}
+                        role="link"
+                        target="_blank"
+                        title={title}
+                        rel="noopener noreferrer"
+                    >
+                        {/* <Component
+                            alt= {alt}
+                            class="cursor-pointer fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
+                        /> */}
+                        <Card
+                            title={title} 
+                            body="" 
+                            href=""
+                            classContainer="bg-secondary flex flex-col  p-5 rounded-3xl hover:bg-skin lg:w-50"
+                            classImg="cursor-pointer fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-12 lg:h-12"
+                            classTitle="text-xl text-skin pt-10 text-center"
+                            classBody=""
+                        >
+                            <Component
+                                alt= {alt}
+                                class="cursor-pointer fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
+                            />
+                        </Card>
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</article>
+<!-- w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 -->

@@ -2,21 +2,75 @@
 import { Image } from 'astro:assets';
 import pictures from '../../public/pictures.png';
 import Button from './Button.astro';
+import X from './icons/X.astro';
+import Github from './icons/Github.astro';
+import Linkedin from './icons/Linkedin.astro';
+import Cv from './icons/Cv.astro';
+import Line from './Line.astro';
+
+const iconsItem = [
+    {
+        alt: "X icon, before Twitter",
+        src: "https://twitter.com/jhonnyrra",
+        title: "Twitter or just X.",
+        Component: X,
+    },
+    {
+        alt: "github icon",
+        src: "https://github.com/jhonnyrra",
+        title: "Github",
+        Component: Github,
+    },
+    {
+        alt: "linkedin icon",
+        src: "https://www.linkedin.com/in/jhonny-israel-urue%C3%B1a-hernandez/",
+        title: "Linkedin",
+        Component: Linkedin,
+    },
+    {
+        alt: "Download my CV",
+        src: "../../public/Curriculum_Jhonny_uruena.pdf",
+        title: "Curriculum Vitae",
+        Component: Cv,
+    },
+]
 ---
-<main class="flex flex-col justify-center sm:flex-row lg:w-3/4">
+
+<main class="flex flex-col justify-center relative bottom-10 sm:flex-row sm:justify-between lg:pb-40">
     <!-- <main class="flex flex-col md:flex-row bg-[url('../../public/pictures.png')]"> -->
-    <div class="m-auto pt-10 p-2 flex-initial max-w-md sm:p-0 sm:flex-auto sm:w-3/4 sm:pt-28 lg:relative lg:left-28">
-        <h1 class="text-xl mb-3 p-3 text-center sm:text-2xl sm:text-left lg:text-4xl">I´M <span class="text-skin text-4xl sm:text-6xl lg:text-7xl">Jhonny Urueña</span></h1>
+    <div class="z-10 pt-10 p-2 max-w-md sm:p-0 sm:flex-auto sm:w-3/4 sm:pt-28 lg:relative lg:left-10 lg:max-w-2xl">
+        <h1 class="text-xl mb-3 p-3 text-center sm:text-2xl sm:text-left lg:text-4xl">I´M <span class="text-skin font-sans font-semibold text-4xl sm:text-6xl lg:text-7xl">Jhonny Urueña</span></h1>
         <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl"><span class="text-skin">+</span>5 years of experience as a <span class="text-skin">software developer "Backend and Frontend"</span>. Track record in creating high performance websites tailored to customer
             needs.</p>
-        <Button>Contact Me</Button>
+        <Button class="sm:relative left-3">Contact Me</Button>
     </div>
-    <div class="m-auto sm:right-0 sm:absolute lg:right-80">
+    <div class="m-auto sm:right-0 sm:absolute lg:right-0">
         <Image src={pictures} 
             alt="A picture to Jhonny Urueña." 
             width="400" 
             height="400" 
-            class="w-60 h-64 sm:w-[400px] sm:h-[450px] lg:w-[600px] lg:h-[700px]"
+            class="w-60 h-64 sm:w-[400px] sm:h-[450px] sm:relative sm:top-40 lg:top-20 lg:w-[600px] lg:h-[700px]"
         />
+        <Line class="rotate-90 w-32 absolute bottom-[130px] right-0 sm:right-1.5 sm:bottom-30 sm:w-36 lg:w-40 lg:h-1 lg:top-72 lg:-right-1" />
+        <ul class="w-60 flex flex-row justify-between absolute bottom-0 m-auto sm:gap-4 sm:-bottom-36 sm:-right-36 sm:flex-col lg:-right-30 lg:bottom-28">
+            {
+                iconsItem.map(({alt, src, title, Component}) =>(
+                    <li>
+                        <a 
+                            href={src} 
+                            role="link"
+                            target="_blank" 
+                            title={title} 
+                            rel="noopener noreferrer"
+                        >
+                            <Component 
+                                alt= {alt} 
+                                class="cursor-pointer fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
+                            />
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
     </div>
 </main>

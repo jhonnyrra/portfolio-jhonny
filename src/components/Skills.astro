@@ -1,0 +1,121 @@
+---
+import Astro from '../../public/SkillsIcon/Astro_dark.svg';
+import AstroL from '../../public/SkillsIcon/Astro_light.svg';
+import Next from '../../public/SkillsIcon/Next.js_wordmark_dark.svg';
+import Nextl from '../../public/SkillsIcon/Next.js_wordmark_light.svg';
+import Php from '../../public/SkillsIcon/Php_dark.svg';
+import Aws from '../../public/SkillsIcon/aws.svg';
+import Docker from '../../public/SkillsIcon/docker.svg';
+import Swagger from '../../public/SkillsIcon/swagger.svg';
+import TypeScript from '../../public/SkillsIcon/typescript.svg';
+import Vue from '../../public/SkillsIcon/vue.svg';
+import Tailwind from '../../public/SkillsIcon/tailwindcss.svg';
+import Python from '../../public/SkillsIcon/python.svg';
+import React from '../../public/SkillsIcon/react.svg';
+import Vercel from '../../public/SkillsIcon/Vercel_wordmark_dark.svg';
+import Vercell from '../../public/SkillsIcon/Vercel_wordmark_light.svg';
+import Laravel from '../../public/SkillsIcon/laravel.svg';
+import Card from './Card.astro';
+
+const cards = [
+    {
+        alt: "Astro",
+        src: "https://twitter.com/jhonnyrra",
+        title: "Twitter or just X.",
+        component: "../../public/SkillsIcon/Astro_dark.svg",
+    },
+    {
+        alt: "AstroL",
+        src: "https://twitter.com/jhonnyrra",
+        title: "Twitter or just X.",
+        component: "../../public/SkillsIcon/Astro_light.svg",
+    },
+    {
+        alt: "Typescript",
+        src: "https://github.com/jhonnyrra",
+        title: "Github",
+        component: "../../public/SkillsIcon/typescript.svg",
+    },
+    {
+        alt: "Vue",
+        src: "https://www.linkedin.com/in/jhonny-israel-urue%C3%B1a-hernandez/",
+        title: "Linkedin",
+        component: "../../public/SkillsIcon/vue.svg",
+    },
+    {
+        alt: "Laravel",
+        src: "../../public/Curriculum_Jhonny_uruena.pdf",
+        title: "Curriculum Vitae",
+        component: "../../public/SkillsIcon/laravel.svg",
+    },
+    {
+        alt: "React",
+        src: "../../public/Curriculum_Jhonny_uruena.pdf",
+        title: "Curriculum Vitae",
+        component: "../../public/SkillsIcon/react.svg",
+    },
+    {
+        alt: "Vercel",
+        src: "https://twitter.com/jhonnyrra",
+        title: "Twitter or just X.",
+        component: "../../public/SkillsIcon/Vercel_wordmark_dark.svg",
+    },
+    {
+        alt: "Vercell",
+        src: "https://twitter.com/jhonnyrra",
+        title: "Twitter or just X.",
+        component: "../../public/SkillsIcon/Vercel_wordmark_light.svg",
+    },
+    {
+        alt: "Next",
+        src: "https://github.com/jhonnyrra",
+        title: "Github",
+        component: "../../public/SkillsIcon/Next.js_wordmark_dark.svg",
+    },
+    {
+        alt: "Nextl",
+        src: "https://github.com/jhonnyrra",
+        title: "Github",
+        component: "../../public/SkillsIcon/Next.js_wordmark_light.svg",
+    },
+    {
+        alt: "Aws",
+        src: "https://www.linkedin.com/in/jhonny-israel-urue%C3%B1a-hernandez/",
+        title: "Linkedin",
+        component: "../../public/SkillsIcon/aws.svg",
+    },
+    {
+        alt: "Python",
+        src: "../../public/Curriculum_Jhonny_uruena.pdf",
+        title: "Curriculum Vitae",
+        component: "../../public/SkillsIcon/python.svg",
+    },
+    {
+        alt: "Tailwindcss",
+        src: "../../public/Curriculum_Jhonny_uruena.pdf",
+        title: "Curriculum Vitae",
+        component: "../../public/SkillsIcon/tailwindcss.svg",
+    },
+]
+---
+
+<section class="w-11/12 m-auto">
+    <h1 class="text-white pb-5 text-center font-sans font-semibold text-3xl sm:pb-10 sm:text-5xl lg:pt-32 lg:text-6xl lg:pb-10 lg:pl-32">
+        My Skills
+    </h1>
+    <div class="grid gap-y-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {
+            cards.map(({alt, title, component}) => (
+                <Card
+                    title={alt} 
+                    body={""} 
+                    href={component}
+                    classContainer="bg-primary justify-self-center p-10 w-60 h-60 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-20 h-20"
+                    classTitle="text-xl text-white pt-10 text-center"
+                    classBody=""
+                />
+            ))      
+        }
+    </div>
+</section>

@@ -18,16 +18,16 @@ const { title, description} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link href="https://fonts.cdnfonts.com/css/winternight" rel="stylesheet">
 		<link href="https://fonts.cdnfonts.com/css/diediedie" rel="stylesheet">
+		<!-- 
+			But! this link is only for letter turn down I means with this I did my name for first one!! 
+			font-family: 'Diediedie', sans-serif;
+		-->
+		<link href="https://fonts.cdnfonts.com/css/cartoon-blocks-christmas-sc?styles=22170,22171" rel="stylesheet">
 		<!-- 
 			But! this link is only for christmas!! 
 			font-family: 'WinterNight DB', sans-serif;
-		-->
-		<link href="https://fonts.cdnfonts.com/css/winternight" rel="stylesheet">
-		<!-- 
-			But! this link is only for hellowen!! 
-			font-family: 'Magnificent Nightmare', sans-serif;
-			font-family: 'Pumpkins Nightmare', sans-serif;
 		-->
 		<link href="https://fonts.cdnfonts.com/css/magnificent-nightmare" rel="stylesheet">
 		<link href="https://fonts.cdnfonts.com/css/pumpkins-nightmare" rel="stylesheet">
@@ -36,19 +36,13 @@ const { title, description} = Astro.props;
 			font-family: 'Magnificent Nightmare', sans-serif;
 			font-family: 'Pumpkins Nightmare', sans-serif;
 		-->
-		<link href="https://fonts.cdnfonts.com/css/cartoon-network-blocks" rel="stylesheet">
-		<link href="https://fonts.cdnfonts.com/css/cartoon-blocks-christmas-sc?styles=22170,22171" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/kbthelittlefella" rel="stylesheet">
 		<!-- 
 			This is //What am I up to? 
 			font-family: 'KBTheLittleFella', sans-serif;                                        
-		-->
-		<link href="https://fonts.cdnfonts.com/css/kbthelittlefella" rel="stylesheet">
-                
-
+		-->          
 		<link href="https://fonts.cdnfonts.com/css/bobloxclassic" rel="stylesheet">
-
 		<link href="https://fonts.cdnfonts.com/css/krona-one" rel="stylesheet">
-
 		<link href="https://fonts.cdnfonts.com/css/quark-2" rel="stylesheet">
 		<!-- 
 			This is //Logo? 
@@ -74,14 +68,14 @@ const { title, description} = Astro.props;
 
 
 					TO DO
-				* Hover Buttom
+
 				* Arrow up
 				* Select text change color
-				* Change langauge and background
+				* Change language and background
 		--------------------------------->
 		<title>{title}</title>
 	</head>
-	<body class="w-screen mx-auto bg-primary text-black dark:text-white">
+	<body class="font-mono w-screen mx-auto bg-primary text-black dark:text-white">
 		<Header /> 
 		<Container>
 			<slot>MeansWhile charge...</slot>
@@ -90,33 +84,11 @@ const { title, description} = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
+	/* html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+	} */
 </style>
 
 
