@@ -3,28 +3,24 @@ import { any } from 'astro/zod';
 
 interface Props {
 	title: string;
-	body: string;
 	href: string;
 	classContainer: string;
 	classImg: string;
 	classTitle: string;
-	classBody: string;
 }
 
-const { href, title, body, classContainer, classImg, classTitle, classBody } = Astro.props;
+const { href, title, classContainer, classImg, classTitle } = Astro.props;
 ---
 
 <div class={classContainer}>
 	{
 		href === "" ?
 			any
-		: <img src={href} class={classImg}/>
+		: 
+			<img src={href} class={classImg}/>
 	}
 	<h2 class={classTitle}>
 		{title}
 	</h2>
-	<p class={classBody}>
-		{body}
-	</p>
 	<slot />
 </div>

@@ -8,17 +8,19 @@ import Experience from '../components/Experience.astro';
 import Testimonial from '../components/Testimonial.astro';
 import ContactMe from '../components/ContactMe.astro';
 import Container from '@/components/Container.astro';
+import Bubble from '@/components/Bubble.astro';
 ---
 
 <Layout title="Jhonny Urueña.- Desarrollador y Programador Web con +5 años de experiencia"
 description="Contrata a Jhonny para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas.">
 		<Hero />
 		<Container class="bg-secondary pt-32 shadow-[inset_0px_0px_15px_5px_#34343b]" >
+			<Projects />
 			<AboutMe />
 			<Skills />
-			<Projects />
+			<Bubble class="4"/>
 		</Container>
 		<Experience />
-		<Testimonial />
+		<!-- <Testimonial /> -->
 		<ContactMe />
 </Layout>
