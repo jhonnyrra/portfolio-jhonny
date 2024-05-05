@@ -9,9 +9,6 @@ export default {
 				skin: '#f0bf6c',
 				card: '#3c3f42',
 			  },
-			//   backgroundImage: {2c343c
-			// 	'pictures': "url('/public/pictures.png')",2C303C
-			//   }252536
 		},
 	},
 	plugins: [],
