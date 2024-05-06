@@ -1,0 +1,14 @@
+---
+const QUANTITY = parseInt(((Astro.props.class)).toString());
+---
+
+<section class={`relative bottom-32 left-3/4 grid grid-cols-4 grid-rows-4 gap-y-20 w-1/4`}>
+    {
+        Array.from({ length: (QUANTITY * QUANTITY) }, (_, index) => {
+            let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
+            return (
+                <div class={`w-5 h-5 bg-skin bg-opacity-25 rounded-full`} />
+            );
+        })
+    }
+</section>

@@ -5,13 +5,10 @@ export default {
 		extend: {
 			colors: {
 				primary: '#34343b',
-				secondary: '#2c343c',			
+				secondary: '#2C303C',			
 				skin: '#f0bf6c',
 				card: '#3c3f42',
 			  },
-			//   backgroundImage: {
-			// 	'pictures': "url('/public/pictures.png')",
-			//   }
 		},
 	},
 	plugins: [],

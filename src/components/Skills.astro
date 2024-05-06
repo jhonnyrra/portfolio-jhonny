@@ -1,0 +1,187 @@
+---
+import Card from './Card.astro';
+
+const cards = {
+    cardsArray: [
+        {
+            title: "Next.Js",
+            component: "/SkillsIcon/Next.js_wordmark_dark.svg",
+        },
+        {
+            title: "Node.Js",
+            component: "/SkillsIcon/nodejs.svg",
+        },
+        {
+            title: "Typescript",
+            component: "/SkillsIcon/typescript.svg",
+        },
+        {
+            title: "Vue.Js",
+            component: "/SkillsIcon/vue.svg",
+        },
+        {
+            title: "Laravel",
+            component: "/SkillsIcon/laravel.svg",
+        },
+        {
+            title: "AWS Server",
+            component: "/SkillsIcon/aws.svg",
+        },
+        {
+            title: "Python",
+            component: "/SkillsIcon/python.svg",
+        },
+        {
+            title: "PostgreSQL",
+            component: "/SkillsIcon/postgresql.svg",
+        },
+    ],
+    cardsArrayTwo: [
+        { 
+            title: "OpenAI",
+            component: "/SkillsIcon/OpenAI_dark.svg",
+        },
+        {
+            title: "JavaScript",
+            component: "/SkillsIcon/javascript.svg",
+        },
+        {
+            title: "GraphQL",
+            component: "/SkillsIcon/graphql.svg",
+        },
+        {
+            title: "PNPm",
+            component: "/SkillsIcon/Pnpm_wordmark_dark.svg",
+        },
+        {
+            title: "Postman",
+            component: "/SkillsIcon/postman.svg",
+        },
+        {
+            title: "React",
+            component: "/SkillsIcon/react.svg",
+        },
+        {
+            title: "Swagger",
+            component: "/SkillsIcon/swagger.svg",
+        },
+        {
+            title: "CSS-3",
+            component: "/SkillsIcon/css.svg",
+        },
+    ],
+    cardsArrayThree: [
+        {
+            title: "HTML-5",
+            component: "/SkillsIcon/html5.svg",
+        },
+        {
+            title: "Tailwind CSS",
+            component: "/SkillsIcon/tailwindcss.svg",
+        },
+        {
+            title: "Git Source Control",
+            component: "/SkillsIcon/git.svg",
+        },
+    ],
+    cardsArrayFour: [
+        {
+            title: "Java",
+            component: "/SkillsIcon/java.svg",
+        },
+        {
+            title: "Docker",
+            component: "/SkillsIcon/docker.svg",
+        },
+    ],
+};
+
+---
+
+<section class="w-11/12 m-auto -mb-36">
+    <h1 class="text-white pb-5 text-center font-sans font-semibold text-3xl sm:pb-10 sm:text-5xl lg:pt-32 lg:text-6xl lg:pb-10 lg:pl-32">
+        My Skills
+    </h1>
+    <div class="grid gap-y-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        {
+            cards.cardsArray.map(({title, component}) => (
+                <Card
+                    title={title} 
+                    href={component}
+                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-60 h-60 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-20 h-20"
+                    classTitle="text-xl text-white pt-10 text-center"
+                />
+            ))      
+        }
+    </div>
+    <div
+        data-collapse="animated-collapse-1"
+        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+    >
+        <div class="grid gap-y-8 grid-cols-1 sm:grid-cols-2  pt-8 lg:grid-cols-4">
+            {
+                cards.cardsArrayTwo.map(({title, component}) => (
+                    <Card
+                        title={title} 
+                        href={component}
+                        classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-60 h-60 rounded-3xl hover:bg-skin items-center"
+                        classImg="m-auto w-20 h-20"
+                        classTitle="text-xl text-white pt-10 text-center"
+                    />
+                ))      
+            }
+        </div>
+    </div>
+    <div class="w-3/4 m-auto pt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {
+            cards.cardsArrayThree.map(({title, component}) => (
+                <Card
+                    title={title} 
+                    href={component}
+                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-60 h-60 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-20 h-20"
+                    classTitle="text-xl text-white pt-10 text-center"
+                />
+            ))      
+        }
+    </div>
+    <div class="w-1/2 m-auto pt-8 grid gap-y-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+        {
+            cards.cardsArrayFour.map(({title, component}) => (
+                <Card
+                    title={title} 
+                    href={component}
+                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-60 h-60 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-20 h-20"
+                    classTitle="text-xl text-white pt-10 text-center"
+                />
+            ))      
+        }
+    </div>
+    <div class="flex justify-center relative top-10">
+            <button
+                class="relative flex items-center w-60 p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-skin text-skin rounded-t-1 group text-dark-500"
+                data-collapse-target="animated-collapse-1"
+            >
+                <span>Do you see more?</span>
+                <i class="absolute right-5 text-base transition-transform group-open:rotate-180">
+                    <span
+                        class="ms-auto transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M19.5 8.25l-7.5 7.5-7.5-7.5" 
+                            />
+                        </svg>
+                    </span>
+                </i>
+            </button>
+    </div>     
+</section>

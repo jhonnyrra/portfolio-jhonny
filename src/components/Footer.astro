@@ -7,39 +7,56 @@ import Line from './Line.astro';
 
 const iconsItem = [
     {
-        alt: "Logo from X, before Twitter",
+        alt: "X icon, before Twitter",
+        src: "https://twitter.com/jhonnyrra",
+        title: "Twitter or just X.",
         Component: X,
     },
     {
-        alt: "Logo from github",
+        alt: "github icon",
+        src: "https://github.com/jhonnyrra",
+        title: "Github",
         Component: Github,
     },
     {
-        alt: "Logo from linkedin",
+        alt: "linkedin icon",
+        src: "https://www.linkedin.com/in/jhonny-israel-urue%C3%B1a-hernandez/",
+        title: "Linkedin",
         Component: Linkedin,
     },
     {
-        alt: "Logo from stack overflow",
+        alt: "stack overflow icon",
+        src: "https://stackoverflow.com/users/2871682/jhonny-israel-urue%c3%b1a-hernandez",
+        title: "Stack Overflow",
         Component: StackOF,
     },
 ]
 ---
-<article class="bg-secondary lg:w-3/4 lg:m-auto">
-    <Line class="w-8 sm:w-11 lg:w-64"  >{8}</Line>
+
+<article class="bg-secondary shadow-[inset_0px_0px_15px_5px_#34343b] lg:m-auto lg:max-w-screen-xl">
     <ul class="flex flex-row gap-4 justify-center pt-12 relative bottom-16">
+        <Line class="bg-skin absolute left-0 w-1/5 mt-3.5 sm:w-2/6 lg:w-2/5" />
         {
-            iconsItem.map(({alt, Component}) =>(
+            iconsItem.map(({alt, src, title, Component}) =>(
                 <li>
-                    <Component 
-                        alt= {alt}  
-                        class="fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
-                    />
+                    <a 
+                        href={src} 
+                        role="link"
+                        target="_blank" 
+                        title={title} 
+                        rel="noopener noreferrer"
+                    >
+                        <Component 
+                            alt= {alt} 
+                            class="cursor-pointer fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
+                        />
+                    </a>
                 </li>
             ))
         }
+        <Line class="bg-skin absolute right-0 w-1/5 mt-3.5 sm:w-2/6 lg:w-2/5" />
     </ul>
-    <Line class="w-8 sm:w-11 lg:w-64" />
-    <!-- <slot name="after" /> -->
-    <h2 class="text-skin text-base">"Thanks for Scrolling"</h2>
-    <h2 class="text-skin text-base">© 2024 midudev. Casi todos los derechos reservados</h2>
+    <h2 class="text-skin text-center px-5 text-lg pb-5 sm:pb-7 sm:text-2xl lg:text-4xl">"Thanks for Scrolling"</h2>
+    <h2 class="text-skin text-center px-5 text-lg pb-20 sm:text-2xl lg:text-4xl">© 2024 jhonny.</h2>
+    <a href="#top" class="bg-skin relative bottom-5 text-center w-20 h-20">◮</a>
 </article>

@@ -30,6 +30,15 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
+thank-s full to:
+Thanks for Watching!
+
+Have a project in mind?
+Contact me
+saleem.maham02@gmail.com
+
+Layout inspirite for: https://www.behance.net/gallery/144641409/Personal-Portfolio-Web-Design
+
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
