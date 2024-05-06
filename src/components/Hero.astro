@@ -37,12 +37,53 @@ const iconsItem = [
 ---
 
 <main class="flex flex-col justify-center relative bottom-10 sm:flex-row sm:justify-between lg:pb-40">
-    <!-- <main class="flex flex-col md:flex-row bg-[url('../../public/pictures.png')]"> -->
-    <div class="z-10 pt-10 p-2 max-w-md sm:p-0 sm:flex-auto sm:w-3/4 sm:pt-28 lg:relative lg:left-10 lg:max-w-2xl">
-        <h1 class="text-xl mb-3 p-3 text-center sm:text-2xl sm:text-left lg:text-4xl">I´M <span class="text-skin font-sans font-semibold text-4xl sm:text-6xl lg:text-7xl">Jhonny Urueña</span></h1>
-        <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl"><span class="text-skin">+</span>5 years of experience as a <span class="text-skin">software developer "Backend and Frontend"</span>. Track record in creating high performance websites tailored to customer
-            needs.</p>
-        <Button class="sm:relative left-3 text-skin hover:text-white border-skin hover:bg-skin focus:ring-4 focus:outline-none focus:ring-skin font-medium rounded-lg px-2 py-2 me-2 mb-2 dark:border-skin dark:text-skin dark:hover:text-primary hover:font-semibold dark:hover:bg-skin dark:focus:ring-yellow-900 border-2 text-lg sm:text-xl sm:border-4 lg:text-3xl lg:border-6">Contact Me</Button>
+    <div class="pt-10 p-2 max-w-md sm:p-0 sm:flex-auto sm:w-3/4 sm:pt-28 lg:relative lg:left-10 lg:max-w-2xl">
+        <h1 class=" text-xl mb-3 p-3 text-center sm:text-2xl sm:text-left lg:text-4xl">I´M <span class="text-skin font-sans font-semibold text-4xl sm:text-6xl lg:text-7xl">Jhonny Urueña</span></h1>
+        <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl">
+            <span class="text-skin">+</span>5 years of experience as a 
+            <span class="text-skin">software developer "Backend and Frontend"</span>.
+        </p> 
+        <div class="absolute -z-20 flex flex-col animate-[move_19s_infinite]">
+            <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl lg:leading-none animate-[white-out_10s_infinite]">
+                high performance 
+                <span class="text-skin">
+                    website
+                </span>
+                builder
+            </p>
+            <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl lg:leading-none animate-[white-out_10s_infinite]">
+                Creativity in 
+                <span class="text-skin">
+                    coding solutions.
+                </span>
+            </p>
+            <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl lg:leading-none animate-[white-out_10s_infinite]">
+                <span class="text-skin">
+                    Empathy 
+                </span>
+                towards users.
+            </p>   
+            <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl lg:leading-none animate-[white-out_10s_infinite]">
+                Continuous learning attitude.
+            </p>
+            <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl lg:leading-none animate-[white-out_10s_infinite]">
+                Collaborative mindset.
+            </p>
+            <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl lg:leading-none animate-[white-out_10s_infinite]">
+                Strong 
+                <span class="text-skin">
+                    communication skills.
+                </span>
+            </p>
+            <p class="text-xl mb-5 w-full p-3 sm:text-2xl lg:text-4xl lg:leading-none animate-[white-out_10s_infinite]">
+                Problem-solving prowess.
+            </p>  
+        </div>
+        
+        <div class="after:content-[''] after:-z-10 after:absolute after:-right-96 after:h-[50vmin] after:w-[75vmin] after:bg-primary after:-translate-x-[40vmin] after:-translate-y-[49vmin] before:content-[''] before:absolute before:-right-96 before:h-[25vmin] before:w-[75vmin] before:bg-primary before:-translate-x-[40vmin] before:translate-y-[5vmin]" />
+        
+        
+        <Button class="top-28 sm:relative left-3 text-skin hover:text-white border-skin hover:bg-skin focus:ring-4 focus:outline-none focus:ring-skin font-medium rounded-lg px-2 py-2 me-2 mb-2 dark:border-skin dark:text-skin dark:hover:text-primary hover:font-semibold dark:hover:bg-skin dark:focus:ring-yellow-900 border-2 text-lg sm:text-xl sm:border-4 lg:text-3xl lg:border-6" href="mailto:jhonnyrra@gmail.com">Contact Me</Button>
     </div>
     <div class="m-auto sm:right-0 sm:absolute lg:right-0">
         <Image src={pictures} 
@@ -51,8 +92,9 @@ const iconsItem = [
             height="400" 
             class="w-60 h-64 sm:w-[400px] sm:h-[450px] sm:relative sm:top-40 lg:top-20 lg:w-[650px] lg:h-[750px] lg:-right-4"
         />
-        <Line class="bg-skin rotate-90 w-32 absolute bottom-[130px] right-0 sm:right-1.5 sm:bottom-30 sm:w-36 lg:w-40 lg:h-1 lg:top-72 lg:-right-1" />
-        <ul class="w-60 flex flex-row justify-between absolute bottom-0 m-auto sm:gap-4 sm:-bottom-36 sm:-right-36 sm:flex-col lg:-right-30 lg:bottom-28">
+        <!-- <shape-outside></shape-outside> for give shape to text around a image! -->
+        <Line class="bg-skin rotate-90 w-32 absolute bottom-[130px] right-0 sm:right-1.5 sm:bottom-30 sm:w-36 lg:absolute lg:bottom-96" />
+        <ul class="w-60 flex flex-row justify-between absolute bottom-0 m-auto sm:gap-4 sm:-bottom-36 sm:-right-36 sm:flex-col lg:-right-30 lg:bottom-24">
             {
                 iconsItem.map(({alt, src, title, Component}) =>(
                     <li>
@@ -74,3 +116,27 @@ const iconsItem = [
         </ul>
     </div>
 </main>
+
+<style>
+    @keyframes move {
+        15% {
+            transform: translatey(-80px);
+            opacity: 1;
+        }
+        30% {
+            transform: translatey(-160px);
+        }
+        45% {
+            transform: translatey(-240px);
+        }
+        60% {
+            transform: translatey(-320px);
+        }
+        75% {
+            transform: translatey(-400px);
+        }
+        90% {
+            transform: translatey(-480px);
+        }
+    }
+</style>

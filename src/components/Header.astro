@@ -4,14 +4,14 @@ import ThemeToggle from "./ThemeToggle.astro"
 
 const navItems = [
     {
-        title: "About Me",
-        label: "about-me",
-        url: "/#sabout-me",
-    },
-    {
         title: "Proyects",
         label: "proyects",
         url: "/#proyects",
+    },
+    {
+        title: "About Me",
+        label: "about-me",
+        url: "/#about",
     },
     {
         title: "Experience",
@@ -21,21 +21,19 @@ const navItems = [
     {
         title: "Contact",
         label: "contact",
-        url: "mailto:jhonnyrra@gmail.com",
+        url: "/#contact",
     },
 ]
 ---
 
-<div class="containerNav top-0 h-15 z-50 flex justify-between sticky sm:rounded-full sm:top-1 sm:m-auto sm:w-11/12 lg:max-w-screen-xl">
-        <!-- /* padding: 20px 0px 20px 0px; */ -->
-    <a href="#top" role="link" title="Know me more!">
-        <!-- <Image src={logo} alt="A bird sitting on a nest of eggs." width="40" height="40" /> -->
+<div class="containerNav top-0 h-15 z-50 flex justify-between lg:sticky sm:rounded-full sm:top-1 sm:m-auto sm:w-11/12 lg:max-w-screen-xl">
+    <a href="#top" role="link" title="Welcome Again!">
         <Logo class="relative w-14 h-14 left-5 sm:absolute sm:left-1/10 sm:top-2.5 lg:top-0 lg:w-20 lg:h-20 lg:left-10" />
     </a>
     <nav class="m-auto flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 relative top-2">
     {
         navItems.map((link) => (
-            <div class="hidden sm:block sm:pb-5">
+            <div class="hidden sm:block sm:pb-5 ">
                 <a
                     class="relative block px-2 py-4 text-base transition hover:text-yellow-500 dark:hover:text-skin lg:text-xl"
                     aria-label={link.label}
@@ -59,8 +57,6 @@ const navItems = [
     </div>
 </div>
 
-
-<!-- TODO: cash the first div only and remplace for .containerNava, then change this class for tailwind elements! -->
 <style>
     .containerNav {
         animation: enhance-header linear both;
@@ -71,6 +67,7 @@ const navItems = [
         to {
             background: rgb(240, 191, 108, .4);
             backdrop-filter: blur(5px);
+            font-size: 18px;
         }
     }
     label {

@@ -6,64 +6,46 @@ const cards = [
         date: "2024",
         title: "Frontend Current...",
         company: "ScriptForze",
-        description: "Develop and generate components for e-commerce company. Development of new implementations and correction of errors in the company's intranet. Development of new implementations and correction of errors in the company's intranet.Development of new implementations and correction of errors in the company's intranet. Development of new implementations and correction of errors in the company's intranet.",
+        description: "Proficiently developed and generated vital components for an e-commerce company, skillfully integrating the interface with the company's distinct business model. Expertly managed and meticulously documented the E-commerce API using the Swagger tool, ensuring clarity and accessibility for all stakeholders. Employed Next.js, Tailwind CSS, and GraphQL to craft a modern and efficient website, while also providing maintenance support for the back office, ensuring seamless functionality across the platform.",
     },
     {   
         date: "2021",
         title: "Senior Backend",
         company: "Colegium, Chile",
-        description: "Development of new implementations and correction of errors in the company's intranet.",
+        description: "With a strong focus on development and error correction, I have driven operational enhancements within the company's intranet, resulting in notable cost savings and enhanced profit margins. My adept problem-solving skills have been instrumental in identifying issues, analyzing information, and implementing effective solutions. Noteworthy accomplishments include the design and construction of a Grafana Labs API-powered dashboard for comprehensive performance measurement across various company sections via Jira. Additionally, I have played a pivotal role in assisting frontend efforts, particularly in refining and optimizing the performance and quality of the new VueJS-based intranet interface, contributing significantly to its continuous improvement.",
     },
     {   
         date: "2019",  
         title: "Web FullStack",
         company: "Mr Domii",
-        description: "Development of new implementations and correction of errors in the company's intranet.",
-    },
-    {   
-        date: "2024",
-        title: "Frontend Current...",
-        company: "ScriptForze",
-        description: "Develop and generate components for e-commerce company. Development of new implementations and correction of errors in the company's intranet. Development of new implementations and correction of errors in the company's intranet.Development of new implementations and correction of errors in the company's intranet. Development of new implementations and correction of errors in the company's intranet.",
+        description: "Proficiently served as a backend developer for an e-commerce website, leveraging Laravel framework and PostgreSQL database. Ensured robustness and clarity through comprehensive Swagger documentation, while also prioritizing unit testing and adherence to best practices in software development.",
     },
 ]
 ---
 
-<section class="flex justify-between pb-52">
-    <h1 class="text-xl mb-3 p-3 text-center relative bottom-20 sm:text-2xl sm:text-left lg:text-4xl">
+<section class="flex pb-10" id="experience">
+    <h1 class="text-xl text-center relative bottom-12 left-10 sm:text-2xl sm:text-left lg:text-4xl">
         <span class="text-white font-sans font-semibold text-4xl sm:text-6xl lg:text-7xl">Experience</span>
     </h1>
-    <article class="relative grid grid-row-3 gap-4 top-20 right-40">
+    <article class="relative grid grid-row-3 gap-4 top-20 right-56">
     {
         cards.map(({ date, title, company, description}) => ( 
             <div class="relative grid grid-cols-5 grid-rows-5  justify-items-center gap-4">
-                <div class="bg-[#707075] w-20 h-10 relative right-0 shadow-[-25px_0px_25px_5px_#29292f] after:contents-[''] after:absolute after:border-[20px] after:border-transparent after:left-20 after:border-l-[#646469] after:top-0">
-                    <h1 class="text-xl lg:text-2xl absolute left-2 top-0.5">
+                <div class="bg-[#707075] w-20 h-10 relative right-0 shadow-[-25px_0px_25px_5px_#29292f] after:contents-[''] after:absolute after:border-[20px] after:border-transparent after:left-20 after:border-l-[#707075] after:top-0">
+                    <time datetime={date} class="text-xl lg:text-2xl absolute left-2 top-0.5">
                         {date}
-                    </h1>
+                    </time>
                 </div>
-
-                <span class="relative right-24 top-1.5 w-7 h-7 bg-skin rounded-full border-2 border-[#d8ab61] shadow-[0px_0px_25px_5px_#d8ab61]" />   
-                <Line class="right-24 bg-white rotate-90 w-52 row-span-4 col-start-2 row-start-2 relative -top-52" />
-
-                {/* <h1 class="col-span-2 relative text-xl font-semibold lg:text-2xl left-2 top-0.5">
-                    {title}
-                </h1>
-                <h2 class="col-span-2 col-start-3 row-start-2 relative text-base lg:text-xl left-2 top-0.5">
-                    {company}
-                </h2>
-                <div class="col-span-2 row-span-3 col-start-3 row-start-3">
-                    {description}
-                </div> */}
-
-                <div class="col-span-2 row-span-5 col-start-3 row-start-1">
+                <span class="relative right-24 top-1.5 w-7 h-7 bg-skin rounded-full border-2 border-[#d8ab61] shadow-[0px_0px_25px_5px_#d8ab61] hover:bg-yellow-400 hover:shadow-none" />   
+                <Line class="right-24 bg-white rotate-90 w-full row-span-4 col-start-2 row-start-2 relative top-20" />
+                <div class="col-span-4 row-span-5 col-start-3 row-start-1 relative -left-32">
                     <h1 class="text-xl font-semibold lg:text-2xl left-2 top-0.5">
                         {title}
                     </h1>
-                    <h2 class="text-base lg:text-xl left-2 top-0.5">
+                    <h2 class="text-base lg:text-xl left-2 top-0.5 text-skin">
                         {company}
                     </h2>
-                    <div class="">
+                    <div class="text-gray-400 text-wrap w-[135%] pt-3">
                         {description}
                     </div>
                 </div>

@@ -1,17 +1,35 @@
 ---
 import { Image } from 'astro:assets';
-import picture from '../../public/picture.png';
+import picture from '../../public/picturepng.png';
 import Bubble from '@/components/Bubble.astro';
 import Line from './Line.astro';
 ---
 
-<Bubble class="3"/>
-<section class="flex justify-between pb-40">
-    <h1 class="text-xl mb-3 p-3 text-center relative bottom-20 sm:text-2xl sm:text-left lg:text-4xl">
-        <span class="text-white font-sans font-semibold text-4xl sm:text-6xl lg:text-7xl">Testimonial</span>
-    </h1>
-    <article class="relative grid grid-row-3 gap-4 top-20 right-40">  
-        <Line class="right-24 bg-white rotate-90 w-52 row-span-4 col-start-2 row-start-2 relative -top-52" />
-        <Image src={picture} alt="A picture to Jhonny Urueña." width="340" height="340" />          
+<section class="flex justify-between">
+    <div class="flex justify-start flex-col relative left-16 pt-10">
+        <Bubble class="4"/>
+    </div>
+    <div class="flex justify-start flex-col relative left-32 pt-20">
+        <Bubble class="3"/>
+    </div>
+    <div class="flex justify-start flex-col relative left-48 pt-32">
+        <Bubble class="2"/>
+    </div>
+    <article class="grid grid-cols-6 grid-rows-6 gap-4 ml-24 -mb-[600px]">  
+        <h1 class="col-span-2 text-center pb-10 text-white font-sans font-semibold text-4xl sm:text-6xl lg:text-7xl">
+            Key Accomplisments
+        </h1>
+        <Line class="col-start-1 row-start-2 bg-skin w-1/5 sm:w-10 lg:w-20" />
+        <p class="h-min col-span-2 row-span-3 col-start-2 row-start-2 text-wrap w-[450px] relative -left-20 bottom-4 text-gray-300 text-base sm:text-lg lg:text-2xl">
+            <span class="text-skin">Driven by a relentless pursuit of excellence</span>. Whether it's crafting intuitive user interfaces or architecting robustbackend solutions, <span class="text-skin">I'm committed</span> to making a meaningful impact through code.
+        </p>
+        <div class="col-span-3 row-span-6 col-start-4 row-start-1 m-auto flex">
+            <div class="bg-skin w-[450px] h-96 absolute right-0 rounded-l-3xl top-56 shadow-[inset_0px_-2px_15px_0px_#fff]" />
+            <Image src={picture} alt="A picture to Jhonny Urueña." width="450" height="450" class="relative bottom-[369px] -right-12" />
+        </div>
+        <Line class="bg-skin w-1/5 sm:w-10 lg:w-10 relative lg:-left-[261px] lg:-bottom-[415px]" />
+        <p class="text-wrap text-gray-300 text-base sm:text-lg lg:relative lg:text-2xl lg:w-80 lg:left-40" >
+            Let's build something remarkable <span class="text-skin">together</span>!.
+        </p>
     </article>
 </section>
