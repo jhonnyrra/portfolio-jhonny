@@ -1,6 +1,4 @@
 ---
-import { any } from 'astro/zod';
-
 interface Props {
 	title: string;
 	href: string;
@@ -10,6 +8,8 @@ interface Props {
 }
 
 const { href, title, classContainer, classImg, classTitle } = Astro.props;
+
+var any:any;
 ---
 
 <div class={classContainer}>

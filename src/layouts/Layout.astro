@@ -14,7 +14,7 @@ const { title, description} = Astro.props;
 <html lang="en" class="overflow-x-hidden">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -92,43 +92,3 @@ const { title, description} = Astro.props;
 		background-size: 224px;
 	} */
 </style>
-
-
-<!-- Explicación:
-
-1* El Usuario inicia el proceso de compra 
-   o pedido en la aplicación.
-2* El Plugin accede a dos puntos de datos 
-   proporcionados por el Usuario durante 
-   el proceso de check-out.
-3* El Plugin consulta el Primer Endpoint 
-   en la Base de Datos para verificar 
-   la puntuación del Usuario.
-4* Si la puntuación es igual o superior 
-   a X (indicando una buena puntuación), 
-   se procede con la creación del pedido/compra.
-5* Si la puntuación es menor que X, se 
-   envía una notificación al Usuario 
-   solicitando que cambie el método de pago.
-6* La App de Tercero (Dropi) registra 
-   la entrega o no entrega del pedido.
-7* La información sobre la entrega se 
-   actualiza en la Base de Datos según 
-   lo registrado por la App de Tercero.
-
-   Explicación:
-
-✔ La tabla "Usuario" almacena información 
-sobre los usuarios de la aplicación, como 
-su identificador único (id_usuario), 
-nombre, email y otros datos relevantes.
-✔ La tabla "Puntuacion" registra la 
-puntuación de los usuarios, donde cada 
-puntuación tiene un identificador 
-único (id_puntuacion) y un valor asociado.
-✔ La tabla "Pedido/Compra" contiene 
-información sobre los pedidos o compras 
-realizadas por los usuarios. Cada 
-pedido tiene un identificador único 
-(id_pedido) y está asociado a un usuario 
-a través de su id_usuario. -->

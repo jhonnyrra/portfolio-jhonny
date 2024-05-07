@@ -9,14 +9,14 @@ import Testimonial from '../components/Testimonial.astro';
 import ContactMe from '../components/ContactMe.astro';
 import Container from '@/components/Container.astro';
 import Bubble from '@/components/Bubble.astro';
-import FloatUp from '@/components/FloatUp.astro';
 ---
 
 <Layout title="Jhonny Urueña.- Desarrollador y Programador Web con +5 años de experiencia"
 description="Contrata a Jhonny para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas.">
 	<Hero />
 	<Container class="bg-secondary pt-32 shadow-[inset_0px_10px_25px_0px_#272b36] relative top-1" >
-		<Projects />
+		<Projects title="Jhonny Urueña.- Some Porfolios"
+		description="Proyects what I made so long time to my carrer"/>
 		<AboutMe />
 		<Skills />
 		<Bubble class="4"/>
@@ -25,5 +25,6 @@ description="Contrata a Jhonny para crear tu aplicación web o móvil. Desarroll
 	<Container class="bg-secondary pt-32 shadow-[inset_0px_10px_25px_0px_#272b36] relative top-6" >
 		<Testimonial />
 	</Container>
-	<ContactMe />
+	<ContactMe title="Jhonny Urueña.- Contact me"
+	description="Talk to Jhonny for know him more"/>
 </Layout>
