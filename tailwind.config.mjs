@@ -9,6 +9,14 @@ export default {
 				skin: '#f0bf6c',
 				card: '#3c3f42',
 			  },
+			  animation: {
+				shine: "shine 1s",
+			  },
+			  keyframes: {
+				shine: {
+				  "100%": { left: "125%" },
+				},
+			  },
 		},
 	},
 	plugins: [],

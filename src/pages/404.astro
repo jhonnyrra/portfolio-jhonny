@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+const thisisfine = "/Pictures/thisisfine.jpg";
+import Layout from '../layouts/Layout.astro';
+import ContactMe from '../components/ContactMe.astro';
+import Container from '@/components/Container.astro';
+import Bubble from '@/components/Bubble.astro';
+---
+<Layout
+	title="Jhonny Urueña - Desarrollador y Programador Web con +5 años de experiencia"
+	description="Contrata a Jhonny para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+>
+	<Container class="bg-secondary pt-10 shadow-[inset_0px_10px_25px_0px_#272b36] relative top-1" >
+        <!-- <Bubble class="4"/> -->
+        <Image
+            src={thisisfine}
+            alt="A picture to meme this is fine."
+            width="1200"
+            height="846"
+            class="m-auto w-[600px] h-[423px] md:w-[1200px] md:h-[846px]"
+        />
+	</Container>
+	<ContactMe
+		title="Jhonny Urueña.- Contact me"
+		description="Talk to Jhonny for know him more"
+	/>
+</Layout>

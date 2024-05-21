@@ -98,19 +98,19 @@ const cards = {
 
 ---
 
-<section class="w-11/12 m-auto -mb-36">
+<section class="w-11/12 m-auto pt-28 lg:-mb-36">
     <h1 class="text-white pb-5 text-center font-sans font-semibold text-3xl sm:pb-10 sm:text-5xl lg:pt-32 lg:text-6xl lg:pb-10 lg:pl-32">
         My Skills
     </h1>
-    <div class="grid gap-y-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid gap-y-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
         {
             cards.cardsArray.map(({title, component}) => (
                 <Card
                     title={title} 
                     href={component}
-                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-60 h-60 rounded-3xl hover:bg-skin items-center"
-                    classImg="m-auto w-20 h-20"
-                    classTitle="text-xl text-white pt-10 text-center"
+                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-36 h-36 sm:w-44 sm:h-44 lg:w-60 lg:h-60 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+                    classTitle=" text-white text-center text-xs pt-3 sm:text-sm sm:pt-5 lg:text-xl lg:pt-10"
                 />
             ))      
         }
@@ -119,16 +119,16 @@ const cards = {
         data-collapse="animated-collapse-1"
         class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
     >
-        <div class="grid gap-y-8 grid-cols-1 sm:grid-cols-2  pt-8 lg:grid-cols-4">
+        <div class="grid gap-y-8 grid-cols-2 sm:grid-cols-3 pt-8 lg:grid-cols-4">
             {
                 cards.cardsArrayTwo.map(({title, component}) => (
                     <Card
-                        title={title} 
-                        href={component}
-                        classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-60 h-60 rounded-3xl hover:bg-skin items-center"
-                        classImg="m-auto w-20 h-20"
-                        classTitle="text-xl text-white pt-10 text-center"
-                    />
+                    title={title} 
+                    href={component}
+                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-36 h-36 sm:w-44 sm:h-44 lg:w-60 lg:h-60 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+                    classTitle=" text-white text-center text-xs pt-3 sm:text-sm sm:pt-5 lg:text-xl lg:pt-10"
+                />
                 ))      
             }
         </div>
@@ -139,9 +139,9 @@ const cards = {
                 <Card
                     title={title} 
                     href={component}
-                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-60 h-60 rounded-3xl hover:bg-skin items-center"
-                    classImg="m-auto w-20 h-20"
-                    classTitle="text-xl text-white pt-10 text-center"
+                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-36 h-36 sm:w-44 sm:h-44 lg:w-60 lg:h-60 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+                    classTitle=" text-white text-center text-xs pt-3 sm:text-sm sm:pt-5 lg:text-xl lg:pt-10"
                 />
             ))      
         }
@@ -152,36 +152,36 @@ const cards = {
                 <Card
                     title={title} 
                     href={component}
-                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-60 h-60 rounded-3xl hover:bg-skin items-center"
-                    classImg="m-auto w-20 h-20"
-                    classTitle="text-xl text-white pt-10 text-center"
+                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-36 h-36 sm:w-44 sm:h-44 lg:w-60 lg:h-60 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+                    classTitle=" text-white text-center text-xs pt-3 sm:text-sm sm:pt-5 lg:text-xl lg:pt-10"
                 />
             ))      
         }
     </div>
-    <div class="flex justify-center relative top-10">
-            <button
-                class="relative flex items-center w-60 p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-skin text-skin rounded-t-1 group text-dark-500"
-                data-collapse-target="animated-collapse-1"
-            >
-                <span>Do you see more?</span>
-                <i class="absolute right-5 text-base transition-transform group-open:rotate-180">
-                    <span
-                        class="ms-auto transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M19.5 8.25l-7.5 7.5-7.5-7.5" 
-                            />
-                        </svg>
-                    </span>
-                </i>
-            </button>
+    <div class="hidden sm:flex sm:justify-center sm:relative sm:top-10">
+        <button
+            class="relative flex items-center w-60 p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-skin text-skin rounded-t-1 group text-dark-500"
+            data-collapse-target="animated-collapse-1"
+        >
+            <span>Do you see more?</span>
+            <i class="absolute right-5 text-base transition-transform group-open:rotate-180">
+                <span
+                    class="ms-auto transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M19.5 8.25l-7.5 7.5-7.5-7.5" 
+                        />
+                    </svg>
+                </span>
+            </i>
+        </button>
     </div>     
 </section>

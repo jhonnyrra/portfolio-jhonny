@@ -1,4 +1,5 @@
 ---
+import Nav from '@/components/Nav.astro';
 import Logo from './icons/Logo.astro';
 import ThemeToggle from "./ThemeToggle.astro"
 
@@ -26,34 +27,42 @@ const navItems = [
 ]
 ---
 
-<div class="containerNav top-0 h-15 z-50 flex justify-between lg:sticky sm:rounded-full sm:top-1 sm:m-auto sm:w-11/12 lg:max-w-screen-xl">
-    <a href="#top" role="link" title="Welcome Again!">
-        <Logo class="relative w-14 h-14 left-5 sm:absolute sm:left-1/10 sm:top-2.5 lg:top-0 lg:w-20 lg:h-20 lg:left-10" />
+<div class="containerNav w-full h-15 flex justify-between sticky top-5 mx-auto z-50 sm:rounded-full sm:top-1 sm:m-auto">
+    <a href="/" role="link" title="Welcome Again!">
+        <Logo class="logo relative w-14 h-14 left-5 sm:absolute sm:left-1/10 sm:top-2.5 lg:top-0 lg:w-20 lg:h-20 lg:left-10" />
     </a>
     <nav class="m-auto flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 relative top-2">
     {
-        navItems.map((link) => (
-            <div class="hidden sm:block sm:pb-5 ">
+        navItems.map(({title, label, url}) => (
+            <div class="shortcut hidden sm:block sm:pb-5 ">
                 <a
                     class="relative block px-2 py-4 text-base transition hover:text-yellow-500 dark:hover:text-skin lg:text-xl"
-                    aria-label={link.label}
-                    href={link.url}
+                    aria-label={label}
+                    href={url}
                 >
-                    {link.title}
+                    {title}
                 </a>
             </div>
         ))
     }
     <ThemeToggle />
     </nav>
-    <!-- <ThemeToggle /> Comming soon -->
     <div class="p-4 sm:hidden">
-        <label for="check" class="block sm:hidden">
-            <input type="checkbox" id="check"/> 
+        <label class="justify-self-end flex flex-col w-[40px] h-[27px] absolute top-3 right-3 sm:hidden" for="check" >
+        <input
+            id="check"
+            type="checkbox"
+            data-collapse-toggle="navbar-default"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+        />
             <span></span>
             <span></span>
             <span></span>
         </label>
+    </div>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <Nav />
     </div>
 </div>
 
@@ -70,21 +79,65 @@ const navItems = [
             font-size: 18px;
         }
     }
-    label {
-        justify-self: end;
-        display:flex;
-        flex-direction:column;
-        width:40px;
-        height: 27px;
-        cursor:pointer;
-    }
     label span {
         background: #f0bf6c;
         border-radius:10px;
         height:3px;
         margin: 3px 0;
+        z-index: 30;
         transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        transform:background-color 0.5s ease;
+        animation: change-color linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 100px;
     }
+    @keyframes change-color {
+        to {
+            background: #2C303C;
+        }
+    }
+    .shortcut {
+        animation: change-shortcut linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 100px;
+    }
+    @keyframes change-shortcut {
+        to {
+            color: #2C303C;
+            font-weight: 600;
+        }
+    }
+    .logo:hover{
+        filter: brightness(0) 
+        saturate(100%) 
+        invert(100%) 
+        sepia(0%) 
+        saturate(7488%) 
+        hue-rotate(237deg) 
+        brightness(102%) 
+        contrast(104%);
+    }
+    .logo {
+        animation: change-fill linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 100px;
+    }
+    @keyframes change-fill {
+        to {
+            filter: brightness(0) 
+            saturate(100%) 
+            invert(18%) 
+            sepia(4%) 
+            saturate(2336%) 
+            hue-rotate(174deg) 
+            brightness(102%) 
+            contrast(97%);
+        }
+        to:hover{
+            filter: brightness(0) saturate(100%) invert(86%) sepia(86%) saturate(4874%) hue-rotate(309deg) brightness(103%) contrast(88%);
+        }
+    }
+    
     span:nth-of-type(1) {
         width:50%;
     }
@@ -99,15 +152,18 @@ const navItems = [
     }
     input[type="checkbox"]:checked ~ span:nth-of-type(1) {
         transform-origin:bottom;
-        transform:rotatez(45deg) translate(3px, 0px)
+        transform:rotatez(45deg) translate(3px, 0px);
+        background-color: #2C303C;
     }
     input[type="checkbox"]:checked ~ span:nth-of-type(2) {
         transform-origin:top;
-        transform:rotatez(-45deg)
+        transform:rotatez(-45deg);
+        background-color: #2C303C;
     }
     input[type="checkbox"]:checked ~ span:nth-of-type(3) {
         transform-origin:bottom;
         width:50%;
         transform: translate(16px, -2px) rotatez(45deg);
+        background-color: #2C303C;
     }
 </style>

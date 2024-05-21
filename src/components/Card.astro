@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
 	title: string;
 	href: string;
@@ -17,7 +19,7 @@ var any:any;
 		href === "" ?
 			any
 		: 
-			<img src={href} class={classImg}/>
+			<Image src={href}  alt="A picture to Jhonny Urueña." class={classImg} width="1" height="1"/>
 	}
 	<h2 class={classTitle}>
 		{title}

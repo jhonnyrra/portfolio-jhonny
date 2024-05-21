@@ -49,6 +49,23 @@ const THEMES = ["Light", "Dark", "System"]
       opacity: 1;
     }
   }
+  .theme-toggle-icon {
+        animation: change-fill linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 100px;
+    }
+    @keyframes change-fill {
+        to {
+            filter: brightness(0) 
+            saturate(100%) 
+            invert(18%) 
+            sepia(4%) 
+            saturate(2336%) 
+            hue-rotate(174deg) 
+            brightness(102%) 
+            contrast(97%);
+        }
+    }
 </style>
 
 <script is:inline>

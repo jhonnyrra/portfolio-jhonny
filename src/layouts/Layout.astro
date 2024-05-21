@@ -11,7 +11,7 @@ const { title, description} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="overflow-x-hidden">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -44,13 +44,14 @@ const { title, description} = Astro.props;
 		<link href="https://fonts.cdnfonts.com/css/bobloxclassic" rel="stylesheet">
 		<link href="https://fonts.cdnfonts.com/css/krona-one" rel="stylesheet">
 		<link href="https://fonts.cdnfonts.com/css/quark-2" rel="stylesheet">
-		<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js" />
-
 		<!-- 
 			This is //Logo? 
 			font-family: 'Quark', sans-serif;
         	font-family: 'Quark Outline', sans-serif;
 		-->
+		<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js" />
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
                 
 		<!-----------------------------
 				`    ``               `
@@ -70,25 +71,26 @@ const { title, description} = Astro.props;
 
 
 					TO DO
-
-				* Arrow up
 				* Select text change color
 				* Change language and background
 		--------------------------------->
 		<title>{title}</title>
 	</head>
-	<body class="font-mono w-screen mx-auto bg-primary text-black dark:text-white overflow-hidden">
+	<body class="mx-auto w-[100vw] sm:max-w-[630px] md:max-w-[760px] font-mono bg-primary text-black dark:text-white lg:mx-auto lg:max-w-screen-lg">
 		<Header /> 
 		<Container>
 			<slot>MeansWhile charge...</slot>
 		</Container>
 		<Footer />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js" />
 	</body>
 </html>
-<style is:global>
-	/* html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	} */
-</style>
+
+<!-- <style is:global>
+	body{
+		overflow-x:hidden;
+		padding:0;
+		height: 100vw;
+  width:100vw;
+	}
+</style> -->

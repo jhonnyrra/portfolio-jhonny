@@ -1,0 +1,121 @@
+---
+import { Image } from "astro:assets";
+import Container from "./Container.astro";
+import Line from "./Line.astro";
+import X from './icons/X.astro';
+import Github from './icons/Github.astro';
+import Linkedin from './icons/Linkedin.astro';
+import Cv from './icons/Cv.astro';
+import RightArrow from './icons/RightArrow.astro';
+
+const navpicture = "/Pictures/Jhonnypicture.jpg";
+
+const navItems = [
+    {
+        title: "Proyects",
+        label: "proyects",
+        // url: "/#proyects",
+    },
+    {
+        title: "About Me",
+        label: "about-me",
+        // url: "/#about",
+    },
+    {
+        title: "Experience",
+        label: "experience",
+        // url: "/#experience",
+    },
+    {
+        title: "Contact",
+        label: "contact",
+        // url: "/#contact",
+    },
+]
+
+const iconsItem = [
+    {
+        alt: "X icon, before Twitter",
+        src: "https://twitter.com/jhonnyrra",
+        title: "Twitter or just X.",
+        Component: X,
+    },
+    {
+        alt: "github icon",
+        src: "https://github.com/jhonnyrra",
+        title: "Github",
+        Component: Github,
+    },
+    {
+        alt: "linkedin icon",
+        src: "https://www.linkedin.com/in/jhonny-israel-urue%C3%B1a-hernandez/",
+        title: "Linkedin",
+        Component: Linkedin,
+    },
+    {
+        alt: "Download my CV",
+        src: "../../public/Curriculum_Jhonny_uruena.pdf",
+        title: "Curriculum Vitae",
+        Component: Cv,
+    },
+]
+---
+
+<!-- <Container class={`${Astro.props.class} sm:hidden absolute bg-[rgb(240,_191,_108,_.9)] w-full h-full z-10`}> -->
+    <!-- aria-current="page"        ....for the firs one -->
+    <div class="sm:hidden absolute max-sm:w-[780px] h-[1524px] z-10 bg-[rgba(240,_191,_108,_0.74)] [box-shadow:0_4px_30px_rgba(0,_0,_0,_0.1)] backdrop-filter backdrop-blur-[5.3px]">
+    <nav class="pt-16 pl-5 flex flex-col text-sm font-medium text-gray-600 dark:text-secondary">
+        {
+            navItems.map(({title, label}) => (
+                <div class="hover:[clip-path:polygon(0_0,_97%_10%,_97%_90%,_0%_100%)] hover:bg-gradient-to-r from-[[rgba(240,_191,_108,_0.74)] backdrop-filter backdrop-blur-[5.3px]] via-[#d8ab61] to-[#c09856] hover:border-[1px] hover:border-[solid] hover:shadow-[inset_-35px_0px_25px_0px_#907240] pt-10 px-10 flex flex-row justify-between">
+                    <h2
+                        class="relative hover:[clip-path:polygon(0_0,_100%_10%,_100%_90%,_0%_100%)] text-7xl font-bold hover:text-secondary dark:hover:text-[#604c2b]"
+                        aria-label={label}
+                    >
+                        {title}
+                    </h2>
+                    <RightArrow class="relative size-14 left-0 hover:size-12" />
+                </div>
+            ))
+        }
+        <Line class="bg-secondary relative top-6 -left-5 w-full"/>
+        <div class="relative flex flex-col items-center  top-6 -left-5 shadow-[inset_0px_10px_25px_0px_#907240] h-[924px] w-[780px] pt-14">
+            <Image
+                src={navpicture}
+                alt="A picture to Jhonny Urueña."
+                width="329"
+                height="749"
+                class="object-none object-[-131px,-86px] rounded-full w-48 h-48 border-double border-4 border-sky-500"
+            />
+            <h1 class="text-secondary text-5xl font-mono font-bold">Jhonny Urueña</h1>
+            <h1 class="text-secondary text-4xl">jhonnyrra@gmail.com</h1>
+            <ul class="flex flex-row gap-x-14 m-auto">
+                {
+                    iconsItem.map(({alt, src, title, Component}) =>(
+                        <li>
+                            <a 
+                                href={src} 
+                                role="link"
+                                target="_blank" 
+                                title={title} 
+                                rel="noopener noreferrer"
+                            >
+                                <Component 
+                                    alt= {alt} 
+                                    class="cursor-pointer fill-current w-12 h-12"
+                                />
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- <style>
+    .clickk:hover {
+        background: red;
+        clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    }
+</style> -->
