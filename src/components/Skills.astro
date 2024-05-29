@@ -99,18 +99,18 @@ const cards = {
 ---
 
 <section class="w-11/12 m-auto pt-28 lg:-mb-36">
-    <h1 class="text-white pb-5 text-center font-sans font-semibold text-3xl sm:pb-10 sm:text-5xl lg:pt-32 lg:text-6xl lg:pb-10 lg:pl-32">
+    <h1 class="text-white pb-5 text-center font-sans font-semibold text-3xl sm:pb-10 sm:text-5xl lg:text-6xl lg:py-16">
         My Skills
     </h1>
-    <div class="grid gap-y-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+    <div class="grid gap-y-8 grid-cols-2 sm:grid-cols-4">
         {
             cards.cardsArray.map(({title, component}) => (
                 <Card
                     title={title} 
                     href={component}
-                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-36 h-36 sm:w-44 sm:h-44 lg:w-60 lg:h-60 rounded-3xl hover:bg-skin items-center"
-                    classImg="m-auto w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
-                    classTitle=" text-white text-center text-xs pt-3 sm:text-sm sm:pt-5 lg:text-xl lg:pt-10"
+                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-8 w-32 h-32  md:w-40 md:h-40 lg:w-52 lg:h-52 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-12 h-12 lg:w-20 lg:h-20"
+                    classTitle="dark:text-white text-center text-xs pt-3 lg:text-xl lg:pt-8"
                 />
             ))      
         }
@@ -119,42 +119,42 @@ const cards = {
         data-collapse="animated-collapse-1"
         class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
     >
-        <div class="grid gap-y-8 grid-cols-2 sm:grid-cols-3 pt-8 lg:grid-cols-4">
+        <div class="grid gap-y-8 grid-cols-2 pt-8 sm:grid-cols-4">
             {
                 cards.cardsArrayTwo.map(({title, component}) => (
                     <Card
-                    title={title} 
-                    href={component}
-                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-36 h-36 sm:w-44 sm:h-44 lg:w-60 lg:h-60 rounded-3xl hover:bg-skin items-center"
-                    classImg="m-auto w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
-                    classTitle=" text-white text-center text-xs pt-3 sm:text-sm sm:pt-5 lg:text-xl lg:pt-10"
-                />
+                        title={title} 
+                        href={component}
+                        classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-8 w-32 md:w-40 md:h-40 h-32 lg:w-52 lg:h-52 rounded-3xl hover:bg-skin items-center"
+                        classImg="m-auto w-12 h-12 lg:w-20 lg:h-20"
+                        classTitle="dark:text-white text-center text-xs pt-3 lg:text-xl lg:pt-8"
+                    />
                 ))      
             }
         </div>
     </div>
-    <div class="w-3/4 m-auto pt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="hidden w-3/4 m-auto pt-8 sm:grid sm:grid-cols-3">
         {
             cards.cardsArrayThree.map(({title, component}) => (
                 <Card
                     title={title} 
                     href={component}
-                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-36 h-36 sm:w-44 sm:h-44 lg:w-60 lg:h-60 rounded-3xl hover:bg-skin items-center"
-                    classImg="m-auto w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
-                    classTitle=" text-white text-center text-xs pt-3 sm:text-sm sm:pt-5 lg:text-xl lg:pt-10"
+                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-6 w-32 h-32 md:w-40 md:h-40 lg:w-52 lg:h-52 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-11 h-11 lg:w-20 lg:h-20"
+                    classTitle="dark:text-white text-center text-[10px] pt-3 lg:text-xl lg:pt-8"
                 />
             ))      
         }
     </div>
-    <div class="w-1/2 m-auto pt-8 grid gap-y-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+    <div class="w-1/2 m-auto pt-8 grid gap-y-8 grid-cols-1 sm:grid-cols-2">
         {
             cards.cardsArrayFour.map(({title, component}) => (
                 <Card
                     title={title} 
                     href={component}
-                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-10 w-36 h-36 sm:w-44 sm:h-44 lg:w-60 lg:h-60 rounded-3xl hover:bg-skin items-center"
-                    classImg="m-auto w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
-                    classTitle=" text-white text-center text-xs pt-3 sm:text-sm sm:pt-5 lg:text-xl lg:pt-10"
+                    classContainer="bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-8 w-32 h-32 md:w-40 md:h-40 lg:w-52 lg:h-52 rounded-3xl hover:bg-skin items-center"
+                    classImg="m-auto w-12 h-12 lg:w-20 lg:h-20"
+                    classTitle="dark:text-white text-center text-xs pt-3 lg:text-xl lg:pt-8"
                 />
             ))      
         }
@@ -183,5 +183,29 @@ const cards = {
                 </span>
             </i>
         </button>
-    </div>     
+    </div>  
+    <div class="relative bottom-32 left-[80%] grid grid-cols-2 grid-rows-2 gap-y-6 w-1/4 sm:hidden">
+        {
+        Array.from({length: 4}, (_, index) => {
+            let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
+            return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
+        })
+        }
+    </div>
+    <div class="hidden sm:relative sm:bottom-32 sm:left-[80%] sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-y-10 sm:w-1/4 lg:hidden">
+        {
+        Array.from({length: 9}, (_, index) => {
+            let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
+            return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
+        })
+        }
+    </div>  
+    <div class="hidden lg:relative lg:bottom-32 lg:left-[750px] lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:gap-y-16 lg:w-1/4">
+        {
+        Array.from({length: 16}, (_, index) => {
+            let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
+            return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
+        })
+        }
+    </div>
 </section>

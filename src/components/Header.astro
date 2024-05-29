@@ -2,6 +2,7 @@
 import Nav from '@/components/Nav.astro';
 import Logo from './icons/Logo.astro';
 import ThemeToggle from "./ThemeToggle.astro"
+import Layout from '@/layouts/Layout.astro';
 
 const navItems = [
     {
@@ -48,20 +49,32 @@ const navItems = [
     <ThemeToggle />
     </nav>
     <div class="p-4 sm:hidden">
-        <label class="justify-self-end flex flex-col w-[40px] h-[27px] absolute top-3 right-3 sm:hidden" for="check" >
-        <input
-            id="check"
-            type="checkbox"
-            data-collapse-toggle="navbar-default"
-            aria-controls="navbar-default"
-            aria-expanded="false"
-        />
+        <label 
+            class="justify-self-end flex flex-col w-[40px] h-[27px] absolute top-3 right-3 sm:hidden" 
+            for="check" 
+        >
+            <input
+                id="check"
+                type="checkbox"
+                data-collapse-toggle="navbar-default"
+                aria-controls="navbar-default"
+                aria-expanded="false"
+                data-modal-target="default-modal"
+                data-modal-toggle="default-modal"
+            />
             <span></span>
             <span></span>
             <span></span>
         </label>
     </div>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+
+
+
+    <!--  -->
+
+
+
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default" >
         <Nav />
     </div>
 </div>

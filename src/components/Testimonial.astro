@@ -1,26 +1,30 @@
 ---
 import { Image } from 'astro:assets';
-import Bubble from '@/components/Bubble.astro';
 import Line from './Line.astro';
-
 const picturepng = "/Pictures/pictur.png";
 
 ---
 
 <section class="bg-secondary shadow-[inset_0px_10px_25px_0px_#272b36] relative top-20">
-    <!-- <div class="flex justify-start flex-col relative left-16 pt-10">
-        <Bubble class="4"/>
-    </div> -->
-    <article class="flex flex-col lg:grid lg:grid-cols-9 lg:grid-rows-4">  
-        <h1 class="text-white order-1 top-10 text-center relative font-sans font-semibold text-4xl sm:col-span-4 sm:row-start-1 sm:col-start-2 sm:text-6xl lg:text-7xl">
+    <div class="absolute top-4 left-4 grid grid-cols-3 grid-rows-3 gap-10 md:gap-20 w-1/4 sm:top-10 sm:left-10">
+        {
+        Array.from({length: 9}, (_, index) => {
+            let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
+            return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
+        })
+        }
+    </div>
+    <article class="flex flex-col lg:grid lg:grid-cols-9 lg:grid-rows-3">  
+        <h1 class="text-white order-1 top-10 text-center relative font-sans font-semibold text-4xl sm:col-span-4 sm:row-start-1 sm:col-start-2 sm:text-6xl">
             Key Accomplisments
         </h1>
         <Line class="hidden bg-skin w-1/5 relative sm:w-10 lg:block lg:col-start-2 lg:row-start-2 lg:top-3 lg:w-20" />
         <p class="order-3 relative pt-56 text-center px-5 text-gray-300 text-base sm:text-lg lg:col-span-3 lg:col-start-3 lg:row-start-2 lg:row-span-1 lg:text-xl lg:text-left lg:px-0 lg:p-0">
             <span class="text-skin">Driven by a relentless pursuit of excellence</span>. Whether it's crafting intuitive user interfaces or architecting robustbackend solutions, <span class="text-skin">I'm committed</span> to making a meaningful impact through code.
         </p>
-        <div class="relative w-[320px] h-[260px] order-2 mx-auto top-48 lg:col-span-3 lg:row-span-2 lg:col-start-7 lg:row-start-2 lg:py-0 lg:top-0">
-            <div class="bg-skin absolute w-full h-full rounded-3xl botoom-32 shadow-[inset_0px_-2px_15px_0px_#fff] lg:w-full lg:rounded-l-3xl" />
+        <div class="relative w-[320px] h-[260px] order-2 mx-auto top-48 lg:col-span-3 lg:row-span-2 lg:col-start-7 lg:row-start-2 lg:py-0 lg:top-0 lg:left-[11px]">
+            <div class="bg-skin absolute w-full h-full rounded-3xl shadow-[inset_0px_-2px_15px_0px_#fff] lg:w-full" />
+            <div class="hidden lg:block lg:bg-skin lg:absolute lg:h-full lg:shadow-[inset_0px_-2px_15px_0px_#fff] lg:w-full lg:rounded-l-3xl" />
             <Image
                 src={picturepng} 
                 alt="A picture to Jhonny Urueña." 
@@ -29,13 +33,13 @@ const picturepng = "/Pictures/pictur.png";
                 class="relative w-80 h-96 bottom-[123px]" 
             />
             <div class="relative bottom-[235px]">
-                <Line class="bg-skin absolute left-1 w-1/5 mt-3.5 sm:w-1/4 lg:w-2/6" />
-                <h1 class="text-white relative bottom-1.5 text-center font-sans font-semibold text-3xl sm:bottom-3.5 sm:text-5xl lg:text-6xl lg:bottom-5" >Developer</h1>
-                <Line class="bg-skin absolute right-1 w-1/5 -mt-5 sm:w-1/4 lg:w-2/6" />
+                <Line class="bg-skin absolute left-1 w-1/5 mt-3.5 sm:w-1/5 sm:bottom-[19px]" />
+                <h1 class="text-white relative bottom-1.5 text-center font-sans font-semibold text-3xl sm:bottom-[6px] sm:text-4xl">Developer</h1>
+                <Line class="bg-skin absolute right-1 w-1/5 -mt-5 sm:w-1/5" />
             </div>
         </div>
         <Line class="bg-skin order-4 my-8 relative w-3/5 mx-auto lg:col-start-2 lg:row-start-3 lg:w-10" />
-        <p class="order-last relative -mb-14 pb-28 text-wrap text-center text-gray-300 text-base w-full sm:text-lg lg:text-xl lg:w-80 lg:col-span-3 lg:col-start-3 lg:row-start-3 lg:row-span-1 lg:text-left lg:top-5 lg:-mb-96" >
+        <p class="order-last relative -mb-14 pb-28 text-wrap text-center text-gray-300 text-base w-full sm:text-lg lg:text-xl lg:w-80 lg:col-span-3 lg:col-start-3 lg:row-start-3 lg:row-span-1 lg:text-left lg:top-5" >
             Let's build something remarkable <span class="text-skin">together</span>!.
         </p>
     </article>

@@ -1,0 +1,252 @@
+---
+const proyects = [
+    {
+        slide: 1, 
+        carousel: 0,
+        target: "scriptforze",
+        src: "/ScriptForze/YonkersGarage.png",
+        src1: "/ScriptForze/YonkersGarage.png",
+        src2: "/ScriptForze/YonkersGarage.png",
+        src3: "/ScriptForze/YonkersGarage.png",
+        src4: "/ScriptForze/YonkersGarage.png",
+        title: "Frontend",
+        sortDescription: "E-commerce company and Backoffice",
+    },
+    {
+        slide: 2, 
+        carousel: 1,
+        target: "colegium",
+        src: "/Colegium/bannerColegium.png",
+        src1: "/Colegium/celular-snm.png",
+        src2: "/Colegium/images.png",
+        src3: "/Colegium/img5.png",
+        src4: "/Colegium/schoolnet.png",
+        title: "Senior Backend",
+        sortDescription: "Intranet Company",
+    },
+    {
+        slide: 3, 
+        carousel: 2,
+        target: "mrdomii",
+        src: "/MrDomii/cardDomii.jpg",
+        src1: "/MrDomii/slider.png",
+        src2: "/MrDomii/domii.png",
+        src3: "/MrDomii/YonkersGarage.png",
+        src4: "/MrDomii/YonkersGarage.png",
+        title: "Web FullStack",
+        sortDescription: "E-commerce with Laravel",
+    },
+    {
+        slide: 4, 
+        carousel: 3,
+        target: "sumapos",
+        src: "/SumaPos/SumaposBanner.JPG",
+        src1: "/SumaPos/Sumapos3.png",
+        src2: "/SumaPos/Sumapos1.png",
+        src3: "/SumaPos/Sumapos2.png",
+        src4: "/SumaPos/YonkersGarage.png",
+        title: "Web Developer",
+        sortDescription: "Web page, landing and Database",
+    },
+    {
+        slide: 5, 
+        carousel: 4,
+        target: "vlooping",
+        src: "/Vlooping/new-message.jpg",
+        src1: "/Vlooping/reply.png",
+        src2: "/Vlooping/audio-record.png",
+        src3: "/Vlooping/donations.png",
+        src4: "/Vlooping/more-content.png",
+        title: "iOS Developer",
+        sortDescription: "Mobile social network",
+    },
+    {
+        slide: 6, 
+        carousel: 5,
+        target: "realstaters",
+        src: "/Realstaters/home1.jpg",
+        src1: "/Realstaters/blog.png",
+        src2: "/Realstaters/api.png",
+        src3: "/Realstaters/property.png",
+        src4: "/Realstaters/sms.png",
+        title: "Web Designer",
+        sortDescription: "Website design",
+    },
+]
+interface Props {
+	targets: string;
+}
+
+const { targets } = Astro.props;
+// console.log(`Hey there! ${targets}`);
+---
+
+<!-- Main modal -->
+{
+    proyects.map(({ slide, carousel, target, src, src1, src2, src3, src4, title, sortDescription }) => (
+        targets === target ?
+            <div id={`${target}-modal`} class="relative p-4 w-full max-w-md max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                            {target}
+                        </h3>
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle={`${target}-modal`}>
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-4 md:p-5">
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">Select your desired position:</p>
+                        <ul class="space-y-4 mb-4">
+                            <li>
+                                {/* <input type="radio" id="job-1" name="job" value="job-1" class="hidden peer" required />
+                                <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">                           
+                                    <div class="block">
+                                        <div class="w-full text-lg font-semibold">UI/UX Engineer</div>
+                                        <div class="w-full text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <svg class="w-4 h-4 ms-3 rtl:rotate-180 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg>
+                                </label> */}
+                                {/* <div class="relative w-[320px] ml-[auto] mr-[auto] my-[100px] [perspective:1000px]">
+                                    <div class="absolute w-full h-full [transform-style:preserve-3d] animate-[rotate360_60s_infinite_forwards_linear]">
+                                        <div class="absolute w-[300px] h-[187px] top-[20px] left-[10px] right-[10px] bg-cover [box-shadow:inset_0_0_0_2000px_rgba(0,0,0,0.5)] flex"><span>This is something</span></div>
+                                        <div class="absolute w-[300px] h-[187px] top-[20px] left-[10px] right-[10px] bg-cover [box-shadow:inset_0_0_0_2000px_rgba(0,0,0,0.5)] flex"><span>Very special</span></div>
+                                        <div class="absolute w-[300px] h-[187px] top-[20px] left-[10px] right-[10px] bg-cover [box-shadow:inset_0_0_0_2000px_rgba(0,0,0,0.5)] flex"><span>Special is the key</span></div>
+                                        <div class="absolute w-[300px] h-[187px] top-[20px] left-[10px] right-[10px] bg-cover [box-shadow:inset_0_0_0_2000px_rgba(0,0,0,0.5)] flex"><span>For you</span></div>
+                                        <div class="absolute w-[300px] h-[187px] top-[20px] left-[10px] right-[10px] bg-cover [box-shadow:inset_0_0_0_2000px_rgba(0,0,0,0.5)] flex"><span>Just give it</span></div>
+                                        <div class="absolute w-[300px] h-[187px] top-[20px] left-[10px] right-[10px] bg-cover [box-shadow:inset_0_0_0_2000px_rgba(0,0,0,0.5)] flex"><span>A try</span></div>
+                                        <div class="absolute w-[300px] h-[187px] top-[20px] left-[10px] right-[10px] bg-cover [box-shadow:inset_0_0_0_2000px_rgba(0,0,0,0.5)] flex"><span>And see</span></div>
+                                        <div class="absolute w-[300px] h-[187px] top-[20px] left-[10px] right-[10px] bg-cover [box-shadow:inset_0_0_0_2000px_rgba(0,0,0,0.5)] flex"><span>How IT Works</span></div>
+                                        <div class="absolute w-[300px] h-[187px] top-[20px] left-[10px] right-[10px] bg-cover [box-shadow:inset_0_0_0_2000px_rgba(0,0,0,0.5)] flex"><span>Woow</span></div>
+                                    </div>
+                                </div> */}
+                                <div class="container">
+  <div class="carousel">
+    <div class="carousel__face"><span>This is something</span></div>
+    <div class="carousel__face"><span>Very special</span></div>
+    <div class="carousel__face"><span>Special is the key</span></div>
+    <div class="carousel__face"><span>For you</span></div>
+    <div class="carousel__face"><span>Just give it</span></div>
+    <div class="carousel__face"><span>A try</span></div>
+    <div class="carousel__face"><span>And see</span></div>
+    <div class="carousel__face"><span>How IT Works</span></div>
+    <div class="carousel__face"><span>Woow</span></div>
+  </div>
+</div>
+                            </li>
+                            <li>
+                                <input type="radio" id="job-2" name="job" value="job-2" class="hidden peer">
+                                <label for="job-2" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                                    <div class="block">
+                                        <div class="w-full text-lg font-semibold">React Developer</div>
+                                        <div class="w-full text-gray-500 dark:text-gray-400">Alphabet</div>
+                                    </div>
+                                    <svg class="w-4 h-4 ms-3 rtl:rotate-180 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="job-3" name="job" value="job-3" class="hidden peer">
+                                <label for="job-3" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                                    <div class="block">
+                                        <div class="w-full text-lg font-semibold">Full Stack Engineer</div>
+                                        <div class="w-full text-gray-500 dark:text-gray-400">Apple</div>
+                                    </div>
+                                    <svg class="w-4 h-4 ms-3 rtl:rotate-180 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg>
+                                </label>
+                            </li>
+                        </ul>
+                        <button class="text-white inline-flex w-full justify-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Next step
+                        </button>
+                    </div>
+                </div>
+            </div>
+        :
+            ""
+    ))
+}
+
+<style>
+
+
+    .container {
+        position: relative;
+        width: 320px;
+        margin: 100px auto 0 auto;
+        perspective: 1000px;
+    }
+        .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d; 
+        animation: rotate360 60s infinite forwards linear;
+    }
+        .carousel__face { 
+        position: absolute;
+        width: 300px;
+        height: 187px;
+        top: 20px;
+        left: 10px;
+        right: 10px;
+        background-size: cover;
+        box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+        display: flex;
+    }
+
+
+    span {
+        margin: auto;
+        font-size: 2rem;
+    }
+    .carousel__face:nth-child(1) {
+        background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        transform: rotateY(  0deg) translateZ(430px); 
+    }
+    .carousel__face:nth-child(2) { 
+        background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+          transform: rotateY( 40deg) translateZ(430px); 
+    }
+    .carousel__face:nth-child(3) {
+        background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        transform: rotateY( 80deg) translateZ(430px); 
+    }
+    .carousel__face:nth-child(4) {
+        background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        transform: rotateY(120deg) translateZ(430px); 
+    }
+    .carousel__face:nth-child(5) { 
+        background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        transform: rotateY(160deg) translateZ(430px); 
+    }
+    .carousel__face:nth-child(6) { 
+        background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        tansform: rotateY(200deg) translateZ(430px); 
+    }
+    .carousel__face:nth-child(7) { 
+        background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        transform: rotateY(240deg) translateZ(430px); 
+    }
+    .carousel__face:nth-child(8) {
+        background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        transform: rotateY(280deg) translateZ(430px); 
+    }
+    .carousel__face:nth-child(9) {
+        background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        transform: rotateY(320deg) translateZ(430px); 
+    }
+    @keyframes rotate360 {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(-360deg);
+        }
+    }
+</style>

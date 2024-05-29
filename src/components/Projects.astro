@@ -1,34 +1,53 @@
 ---
 import Button from './Button.astro';
 import Card from './Card.astro';
+import Modal from './Modal.astro';
 
 const cards = [
     {
+        slide: 1, 
+        carousel: 0,
+        target: "scriptforze",
         src: "/ScriptForze/YonkersGarage.png",
         title: "Frontend",
         sortDescription: "E-commerce company and Backoffice",
     },
     {
+        slide: 2, 
+        carousel: 1,
+        target: "colegium",
         src: "/Colegium/bannerColegium.png",
         title: "Senior Backend",
         sortDescription: "Intranet Company",
     },
     {
+        slide: 3, 
+        carousel: 2,
+        target: "mrdomii",
         src: "/MrDomii/cardDomii.jpg",
         title: "Web FullStack",
         sortDescription: "E-commerce with Laravel",
     },
     {
+        slide: 4, 
+        carousel: 3,
+        target: "sumapos",
         src: "/SumaPos/SumaposBanner.JPG",
         title: "Web Developer",
         sortDescription: "Web page, landing and Database",
     },
     {
+        slide: 5, 
+        carousel: 4,
+        target: "vlooping",
         src: "/Vlooping/new-message.jpg",
         title: "iOS Developer",
         sortDescription: "Mobile social network",
     },
     {
+        slide: 6, 
+        carousel: 5,
+        target: "realstaters",
         src: "/Realstaters/home1.jpg",
         title: "Web Designer",
         sortDescription: "Website design",
@@ -45,9 +64,13 @@ const cards = [
         <!-- Carousel wrapper slide-->
         <div class="relative overflow-hidden h-[500px] w-[250px]]">
             {
-                cards.map(({ title, src, sortDescription}) => (
+                cards.map(({ target, title, src, sortDescription}) => (
                     // Item 1
-                    <div class="hidden outline-offset-2 duration-0 ease-in-out m-auto" data-carousel-item>
+                    <div class="hidden outline-offset-2 duration-0 ease-in-out m-auto"
+                     data-carousel-item
+                     data-modal-target={`${target}-modal`}
+                            data-modal-toggle={`${target}-modal`}>
+
                         <Card
                             title={title}
                             href={src}
@@ -69,26 +92,61 @@ const cards = [
         </div>
         <!-- Slider indicators -->
         <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 6" data-carousel-slide-to="5"></button>
+            {
+                cards.map(({ slide, carousel}) => (
+                    <button 
+                        type="button" 
+                        class="w-3 h-3 rounded-full bg-skin" 
+                        aria-current="true" 
+                        aria-label={`Slide ${slide}`}
+                        data-carousel-slide-to={carousel}
+                    />
+                ))
+            }
         </div>
         <!-- Slider controls -->
-        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+        <button 
+            type="button" 
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" 
+            data-carousel-prev
+        >
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-skin/30 dark:bg-skin/30 group-hover:bg-white/50 dark:group-hover:bg-skin/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-primary/70 group-focus:outline-none">
+                <svg 
+                    class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" 
+                    aria-hidden="true" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 6 10"
+                >
+                    <path 
+                        stroke="currentColor" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        stroke-width="2" 
+                        d="M5 1 1 5l4 4"
+                    />
                 </svg>
                 <span class="sr-only">Previous</span>
             </span>
         </button>
-        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        <button 
+            type="button" 
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" 
+            data-carousel-next
+        >
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-skin/30 group-hover:bg-white/50 dark:group-hover:bg-skin/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-primary/70 group-focus:outline-none">
+                <svg 
+                    class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" 
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 6 10"
+                >
+                    <path 
+                        stroke="currentColor" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        stroke-width="2" d="m1 9 4-4-4-4"
+                    />
                 </svg>
                 <span class="sr-only">Next</span>
             </span>
@@ -120,4 +178,12 @@ const cards = [
     <div class="flex justify-center pt-14">
         <Button class="text-skin hover:text-white border-skin hover:bg-skin focus:ring-4 focus:outline-none focus:ring-skin font-medium rounded-lg px-2 py-2 me-2 mb-2 dark:border-skin dark:text-skin dark:hover:text-primary hover:font-semibold dark:hover:bg-skin dark:focus:ring-yellow-900 border-2 text-lg sm:text-xl sm:border-4 lg:text-3xl lg:border-6">View More</Button>
     </div>
+
+    {
+        cards.map(({ target }) => (
+            <div id={`${target}-modal`} tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <Modal targets={target} />
+            </div>
+        ))
+    }
 </section>
