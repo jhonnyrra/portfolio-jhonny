@@ -6,12 +6,9 @@ Hello there! 👋 I'm a passionate full-stack JavaScript developer with a keen f
 npm create astro@latest -- --template basics
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-[![License MIT](https://github.com/codespaces/badge.svg)](https://github.com/jhonnyrra/portfolio-jhonny/blob/main/LICENSE)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![GitHub watchers](https://img.shields.io/github/watchers/jhonnyrra/portfolio-jhonny)
+![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/jhonnyrra)
+![GitHub License](https://img.shields.io/github/license/jhonnyrra/portfolio-jhonny)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
@@ -65,6 +62,6 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-As alway proyect made with a lot ❤ with 🚀Astro.
+As always! project realized with a lot of ❤ with 🚀Astro.
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
