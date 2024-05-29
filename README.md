@@ -12,7 +12,7 @@ npm create astro@latest -- --template basics
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-![just-the-basics](http://localhost:4321/Pictures/landingOne.JPG)
+[![landing-One.jpg](https://i.postimg.cc/BnnQ7XCD/landing-One.jpg)](https://postimg.cc/2VgDVjM8)
 
 ## 🚀 Project Structure
 
