@@ -8,7 +8,8 @@ const cards = [
         slide: 1, 
         carousel: 0,
         target: "scriptforze",
-        src: "/ScriptForze/YonkersGarage.png",
+        src: "/ScriptForze/scriptforze9.JPG",
+        alt: "A picture to ScriptForze",
         title: "Frontend",
         sortDescription: "E-commerce company and Backoffice",
     },
@@ -16,7 +17,8 @@ const cards = [
         slide: 2, 
         carousel: 1,
         target: "colegium",
-        src: "/Colegium/bannerColegium.png",
+        src: "/Colegium/colegium9.png",
+        alt: "A picture to Colegium",
         title: "Senior Backend",
         sortDescription: "Intranet Company",
     },
@@ -24,7 +26,8 @@ const cards = [
         slide: 3, 
         carousel: 2,
         target: "mrdomii",
-        src: "/MrDomii/cardDomii.jpg",
+        src: "/MrDomii/domii2.jpg",
+        alt: "A picture to MrDomii",
         title: "Web FullStack",
         sortDescription: "E-commerce with Laravel",
     },
@@ -32,7 +35,8 @@ const cards = [
         slide: 4, 
         carousel: 3,
         target: "sumapos",
-        src: "/SumaPos/SumaposBanner.JPG",
+        src: "/SumaPos/sumapos9.jpg",
+        alt: "A picture to SumaPos",
         title: "Web Developer",
         sortDescription: "Web page, landing and Database",
     },
@@ -40,7 +44,8 @@ const cards = [
         slide: 5, 
         carousel: 4,
         target: "vlooping",
-        src: "/Vlooping/new-message.jpg",
+        src: "/Vlooping/vlooping9.jpg",
+        alt: "A picture to Vlooping",
         title: "iOS Developer",
         sortDescription: "Mobile social network",
     },
@@ -48,7 +53,8 @@ const cards = [
         slide: 6, 
         carousel: 5,
         target: "realstaters",
-        src: "/Realstaters/home1.jpg",
+        src: "/Realstaters/realstaters9.jpg",
+        alt: "A picture to Realstaters",
         title: "Web Designer",
         sortDescription: "Website design",
     },
@@ -64,16 +70,19 @@ const cards = [
         <!-- Carousel wrapper slide-->
         <div class="relative overflow-hidden h-[500px] w-[250px]]">
             {
-                cards.map(({ target, title, src, sortDescription}) => (
+                cards.map(({ target, title, src, alt, sortDescription}) => (
                     // Item 1
-                    <div class="hidden outline-offset-2 duration-0 ease-in-out m-auto"
-                     data-carousel-item
-                     data-modal-target={`${target}-modal`}
-                            data-modal-toggle={`${target}-modal`}>
+                    <div 
+                        class="hidden outline-offset-2 duration-0 ease-in-out m-auto"
+                        data-carousel-item
+                        data-modal-target={`${target}-modal`}
+                        data-modal-toggle={`${target}-modal`}
+                    >
 
                         <Card
                             title={title}
                             href={src}
+                            alt={alt}
                             classContainer="relative group flex flex-col justify-center w-full h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                             classImg="w-full h-full relative m-auto object-cover block"
                             classTitle="absolute hidden text-3xl t-5 group-hover:block z-30 top-28 self-center"
@@ -155,23 +164,28 @@ const cards = [
 
     <div class="hidden m-auto gap-10 sm:grid sm:grid-cols-2 xl:grid-cols-3">
         {
-            cards.map(({ title, src, sortDescription}) => (
-                <Card
-                    title={title}
-                    href={src}
-                    classContainer="items-center group relative cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl flex flex-col justify-center"
-                    classImg="w-80 h-80 object-cover"
-                    classTitle="absolute hidden text-3xl t-5 group-hover:block z-10 top-28 self-center"
+            cards.map(({ title, src, alt, sortDescription, target}) => (
+                <div 
+                    data-modal-target={`${target}-modal`}
+                    data-modal-toggle={`${target}-modal`}
                 >
-                    <span class="absolute top-96 z-0 h-0.5 w-0.5 rounded-full bg-secondary opacity-75 transition-all duration-500 group-hover:scale-[550]"></span>
-                    <div class="absolute hidden z-10 min-w-60 max-w-60 top-32 self-center group-hover:block">
-                        <div class="space-y-6 pt-5 pb-5 text-base transition-all duration-300 group-hover:text-white/90">
-                            <p class="text-center">{sortDescription}</p>
+                    <Card
+                        title={title}
+                        href={src}
+                        alt={alt}
+                        classContainer="items-center group relative cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl flex flex-col justify-center"
+                        classImg="w-80 h-80 object-cover"
+                        classTitle="absolute hidden text-3xl t-5 group-hover:block z-10 top-28 self-center"
+                    >
+                        <span class="absolute top-96 z-0 h-0.5 w-0.5 rounded-full bg-secondary opacity-75 transition-all duration-500 group-hover:scale-[550]"></span>
+                        <div class="absolute hidden z-10 min-w-60 max-w-60 top-32 self-center group-hover:block">
+                            <div class="space-y-6 pt-5 pb-5 text-base transition-all duration-300 group-hover:text-white/90">
+                                <p class="text-center">{sortDescription}</p>
+                            </div>
+                            <Button class="text-skin hover:text-white border-skin hover:bg-skin focus:ring-4 focus:outline-none focus:ring-skin font-medium rounded-lg px-2 me-2 mb-2 dark:border-skin dark:text-skin dark:hover:text-primary hover:font-semibold dark:hover:bg-skin dark:focus:ring-yellow-900 border-2 absolute left-16 sm:text-xl sm:border-4 lg:text-sm lg:border-6">See More ⇨</Button>
                         </div>
-                        <Button class="text-skin hover:text-white border-skin hover:bg-skin focus:ring-4 focus:outline-none focus:ring-skin font-medium rounded-lg px-2 me-2 mb-2 dark:border-skin dark:text-skin dark:hover:text-primary hover:font-semibold dark:hover:bg-skin dark:focus:ring-yellow-900 border-2 absolute left-16 sm:text-xl sm:border-4 lg:text-sm lg:border-6">See More ⇨</Button>
-                    </div>
-                </Card>
-
+                    </Card>
+                </div>
             ))
         }
     </div>

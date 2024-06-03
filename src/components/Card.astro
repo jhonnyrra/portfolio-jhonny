@@ -4,12 +4,13 @@ import { Image } from 'astro:assets';
 interface Props {
 	title: string;
 	href: string;
+	alt: string;
 	classContainer: string;
 	classImg: string;
 	classTitle: string;
 }
 
-const { href, title, classContainer, classImg, classTitle } = Astro.props;
+const { href, alt, title, classContainer, classImg, classTitle } = Astro.props;
 
 var any:any;
 ---
@@ -19,7 +20,7 @@ var any:any;
 		href === "" ?
 			any
 		: 
-			<Image src={href}  alt="A picture to Jhonny Urueña." class={classImg} width="1" height="1"/>
+			<Image src={href}  alt={href} class={classImg} width="1" height="1"/>
 	}
 	<h2 class={classTitle}>
 		{title}
