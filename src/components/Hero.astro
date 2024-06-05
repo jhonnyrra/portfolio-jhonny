@@ -36,7 +36,7 @@ const iconsItem = [
     },
 ]
 ---
-<!-- outline outline-offset-2 outline-1 -->
+
 <main class="flex flex-col justify-center relative sm:flex-row sm:justify-between sm:pb-48 sm:-mt-20 md:mb-[-83px] lg:pb-36 lg:mb-0">
     <div class="pt-10 px-2 sm:p-0 sm:flex-auto sm:w-3/4 sm:pt-28 lg:relative lg:left-10 lg:max-w-2xl">
         <h1 class="text-xl mb-3 p-3 text-center sm:text-2xl sm:text-left lg:text-4xl">I´M <span class="text-skin font-sans font-semibold text-4xl sm:text-6xl lg:text-7xl">Jhonny Urueña</span></h1>
@@ -73,12 +73,6 @@ const iconsItem = [
                 </span>
                 towards users.
             </p>   
-            <!-- <p class="text-sm mb-5 w-full p-3 sm:text-2xl lg:text-4xl lg:leading-none animate-[white-out_10s_infinite]">
-                <span class="text-skin">
-                    -
-                </span>
-                Continuous learning attitude.
-            </p> -->
             <p class="text-sm mb-5 w-full p-3 sm:text-xl lg:text-1xl lg:leading-none animate-[white-out_10s_infinite]">
                 <span class="text-skin">
                     -
@@ -128,7 +122,7 @@ const iconsItem = [
             class="w-60 h-64 sm:w-[350px] sm:h-[400px] md:w-[400px] md:h-[450px] relative top-1 mt-5 sm:top-40 lg:top-20 lg:w-[550px] lg:h-[600px] lg:-right-4 xl:w-[550px] xl:h-[600px]"
         />
         <Line class="bg-skin rotate-90 w-32 absolute bottom-[130px] -right-2 sm:right-1.5 sm:bottom-30 sm:w-36 lg:absolute lg:bottom-72" />
-        <ul class="w-60 flex flex-row justify-between absolute bottom-5 m-auto sm:w-0 sm:right-[61px] sm:gap-4 sm:-bottom-36 sm:items-end sm:flex-col lg:-right-30 lg:bottom-0">
+        <ul class="w-60 flex flex-row justify-between absolute bottom-5 m-auto sm:w-0 sm:right-[61px] sm:gap-4 sm:-bottom-36 sm:items-end sm:flex-col lg:-right-30 lg:bottom-[-29px]">
             {
                 iconsItem.map(({alt, src, title, Component}) =>(
                     <li>
@@ -139,10 +133,15 @@ const iconsItem = [
                             title={title} 
                             rel="noopener noreferrer"
                         >
+                            {Component === Cv ? 
                             <Component 
                                 alt= {alt} 
-                                class="cursor-pointer fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
-                            />
+                                class="hover:fill-skin cursor-pointer fill-current relative w-9 h-9 bottom-1 sm:w-12 sm:h-12 sm:left-2 lg:w-14 lg:h-14 lg:left-3"
+                            /> : 
+                            <Component 
+                                alt= {alt} 
+                                class="hover:fill-skin cursor-pointer fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
+                            />}
                         </a>
                     </li>
                 ))

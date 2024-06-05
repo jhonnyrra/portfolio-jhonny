@@ -65,7 +65,6 @@ const cards = [
     <h1 class="text-white pb-5 text-center font-sans font-semibold text-3xl sm:pb-10 sm:text-5xl lg:text-6xl">
         Portfolio
     </h1>
-
     <div id="default-carousel" class="relative mx-auto w-11/12 sm:hidden" data-carousel="">
         <!-- Carousel wrapper slide-->
         <div class="relative overflow-hidden h-[500px] w-[250px]]">
@@ -78,7 +77,6 @@ const cards = [
                         data-modal-target={`${target}-modal`}
                         data-modal-toggle={`${target}-modal`}
                     >
-
                         <Card
                             title={title}
                             href={src}
@@ -161,7 +159,6 @@ const cards = [
             </span>
         </button>
     </div>
-
     <div class="hidden m-auto gap-10 sm:grid sm:grid-cols-2 xl:grid-cols-3">
         {
             cards.map(({ title, src, alt, sortDescription, target}) => (
@@ -192,7 +189,6 @@ const cards = [
     <div class="flex justify-center pt-14">
         <Button class="text-skin hover:text-white border-skin hover:bg-skin focus:ring-4 focus:outline-none focus:ring-skin font-medium rounded-lg px-2 py-2 me-2 mb-2 dark:border-skin dark:text-skin dark:hover:text-primary hover:font-semibold dark:hover:bg-skin dark:focus:ring-yellow-900 border-2 text-lg sm:text-xl sm:border-4 lg:text-3xl lg:border-6">View More</Button>
     </div>
-
     {
         cards.map(({ target }) => (
             <div id={`${target}-modal`} tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">

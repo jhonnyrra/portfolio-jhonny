@@ -49,6 +49,16 @@ const { title, description} = Astro.props;
 			font-family: 'Quark', sans-serif;
         	font-family: 'Quark Outline', sans-serif;
 		-->
+		<link href="https://fonts.cdnfonts.com/css/montereymediumflf" rel="stylesheet">
+		<!-- It´s so beatiful
+			font-family: 'MontereyMediumFLF', sans-serif; 
+		-->
+        <link href="https://fonts.cdnfonts.com/css/nrt-reg" rel="stylesheet">    
+		<!-- gg the best
+			font-family: 'NRT Reg', sans-serif;                                    ; 
+		-->
+                                                
+                
 		<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js" />
 
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
@@ -76,7 +86,7 @@ const { title, description} = Astro.props;
 		--------------------------------->
 		<title>{title}</title>
 	</head>
-	<body class="mx-auto w-[100vw] sm:max-w-[630px] md:max-w-[760px] font-mono bg-primary text-black dark:text-white lg:mx-auto lg:max-w-screen-lg">
+	<body class="selection:bg-skin selection:text-primary mx-auto w-[100vw] sm:max-w-[630px] md:max-w-[760px] bg-primary text-black dark:text-white lg:mx-auto lg:max-w-screen-lg">
 		<Header /> 
 		<Container>
 			<slot>MeansWhile charge...</slot>
@@ -86,11 +96,8 @@ const { title, description} = Astro.props;
 	</body>
 </html>
 
-<!-- <style is:global>
+<style is:global>
 	body{
-		overflow-x:hidden;
-		padding:0;
-		height: 100vw;
-  width:100vw;
+		font-family: 'NRT Reg', sans-serif;                                         
 	}
-</style> -->
+</style>
