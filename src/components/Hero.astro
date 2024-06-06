@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Button from './Button.astro';
+import Badge from "./Badge.astro"
 import X from './icons/X.astro';
 import Github from './icons/Github.astro';
 import Linkedin from './icons/Linkedin.astro';
@@ -30,7 +31,7 @@ const iconsItem = [
     },
     {
         alt: "Download my CV",
-        src: "../../public/Curriculum_Jhonny_uruena.pdf",
+        src: "../../public/Curriculum_Jhonny_urueña_Hernandez.pdf",
         title: "Curriculum Vitae",
         Component: Cv,
     },
@@ -104,7 +105,7 @@ const iconsItem = [
     
         <div class="lg:after:content-[''] lg:after:-z-10 lg:after:absolute lg:after:h-[50vmin] lg:after:w-[75vmin] lg:after:bg-primary lg:after:-translate-y-[53vmin] lg:before:content-[''] lg:before:-z-10 lg:before:absolute lg:before:h-[28vmin] lg:before:w-[75vmin] lg:before:bg-primary lg:before:translate-y-[1vmin] xl:hidden" />
     
-        <div class="xl:after:content-[''] xl:after:-z-10 xl:after:absolute xl:after:h-[60vmin] xl:after:w-4/5 xl:after:bg-primary xl:after:-translate-y-[64vmin] xl:before:content-[''] xl:before:-z-10 xl:before:absolute xl:before:h-[30vmin] xl:before:w-4/5 xl:before:bg-primary 2xl:hidden" />
+        <div class="xl:after:content-[''] xl:after:-z-10 xl:after:absolute xl:after:h-[60vmin] xl:after:w-11/12 xl:after:bg-primary xl:after:-translate-y-[64vmin] xl:before:content-[''] xl:before:-z-10 xl:before:absolute xl:before:h-[100vmin] xl:before:w-11/12 xl:before:bg-primary 2xl:hidden" />
 
         <div class="2xl:after:content-[''] 2xl:after:-z-10 2xl:after:absolute 2xl:after:h-[50vmin] 2xl:after:w-[45vmin] 2xl:after:bg-primary 2xl:after:-translate-y-[53vmin] 2xl:before:content-[''] 2xl:before:-z-10 2xl:before:absolute 2xl:before:h-[25vmin] 2xl:before:w-[45vmin] 2xl:before:bg-primary" />
         
@@ -112,6 +113,7 @@ const iconsItem = [
             class="ml-3 text-skin hover:text-white border-skin hover:bg-skin focus:ring-4 focus:outline-none focus:ring-skin font-medium rounded-lg px-2 py-2 me-2 mt-2 dark:border-skin dark:text-skin dark:hover:text-primary hover:font-semibold dark:hover:bg-skin dark:focus:ring-yellow-900 border-2 text-lg sm:text-xl sm:border-4 sm:mt-5 lg:text-3xl lg:border-6" 
             href="mailto:jhonnyrra@gmail.com"
         >Contact Me</Button>
+        <Badge>Available to work</Badge>
     </div>
     <div class="mx-auto sm:right-0 sm:absolute sm:bottom-36 md:bottom-60 lg:right-1 lg:bottom-16">
         <Image

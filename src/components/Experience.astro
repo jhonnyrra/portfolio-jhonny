@@ -4,9 +4,6 @@ import Line from "./Line.astro";
 const cards = [
     {   
         row: 1,
-        width: 40,
-        right: 190,
-        top: 244,
         date: "2024",
         title: "Frontend Current...",
         company: "ScriptForze",
@@ -14,9 +11,6 @@ const cards = [
     },
     {   
         row: 2,
-        width: 72,
-        right: 104,
-        top: 237,
         date: "2021",
         title: "Senior Backend",
         company: "Colegium, Chile",
@@ -24,9 +18,6 @@ const cards = [
     },
     {   
         row: 3,
-        width: 20,
-        right: 0,
-        top: 135,
         date: "2019",  
         title: "Web FullStack",
         company: "Mr Domii",
@@ -41,7 +32,7 @@ const cards = [
     </h1>
     <article class="-mb-20 relative grid grid-rows-1 sm:w-full sm:gap-4 sm:top-0 sm:grid-row-3">
     {
-        cards.map(({ date, title, company, description, right, top, row, width }) => ( 
+        cards.map(({ date, title, company, description, row }) => ( 
             <div class={`row-start-${row} grid grid-cols-2 grid-rows-1 sm:relative sm:grid-cols-5 sm:grid-rows-1 sm:gap-4`}>
                 <div class="bg-[#707075] relative top-6 col-start-1 rotate-90 w-20 h-8 right-0 shadow-[-25px_0px_25px_5px_#29292f] after:contents-[''] after:absolute after:border-[16px] after:border-transparent after:left-20 after:border-l-[#707075] after:top-0 sm:col-start-2 sm:col-row-1 sm:left-[-100px] sm:rotate-0 sm:h-10 sm:after:border-[20px] sm:top-0">
                     <time datetime={date} class="ml-3 w-5 h-20 text-xl absolute left-2 top-0.5 sm:top-[0.5rem]">

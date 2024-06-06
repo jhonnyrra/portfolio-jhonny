@@ -96,7 +96,6 @@ const cards = {
     ],
 };
 
-let a;
 ---
 
 <section class="w-11/12 m-auto pt-28 lg:-mb-36">
@@ -194,19 +193,19 @@ let a;
         </button>
     </div>  
     <div class="relative bottom-32 left-[80%] grid grid-cols-2 grid-rows-2 gap-y-6 w-1/4 sm:hidden">
-        {Array.from({length: 4}, (_, index) => {
+        {Array.from({length: 4}, () => {
             let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
             return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
         })}
     </div>
     <div class="hidden sm:relative sm:bottom-32 sm:left-[80%] sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-y-10 sm:w-1/4 lg:hidden">
-        {Array.from({length: 9}, (_, index) => {
+        {Array.from({length: 9}, () => {
             let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
             return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
         })}
     </div>  
     <div class="hidden lg:relative lg:bottom-32 lg:left-[750px] lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:gap-y-16 lg:w-1/4">
-        {Array.from({length: 16}, (_, index) => {
+        {Array.from({length: 16}, () => {
             let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
             return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
         })}

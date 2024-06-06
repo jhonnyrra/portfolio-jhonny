@@ -8,7 +8,7 @@ const picturepng = "/Pictures/pictur.png";
 <section class="bg-secondary shadow-[inset_0px_10px_25px_0px_#272b36] relative top-20">
     <div class="absolute top-4 left-4 grid grid-cols-3 grid-rows-3 gap-10 md:gap-20 w-1/4 sm:top-10 sm:left-10">
         {
-        Array.from({length: 9}, (_, index) => {
+        Array.from({length: 9}, () => {
             let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
             return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
         })

@@ -11,19 +11,19 @@ import Container from '@/components/Container.astro';
 >
 	<Container class="bg-secondary shadow-[inset_0px_10px_25px_0px_#272b36] relative top-4" >
         <div class="absolute left-[55%] top-4 grid grid-cols-3 grid-rows-3 gap-y-6 w-1/2 sm:hidden">
-            {Array.from({length: 9}, (_, index) => {
+            {Array.from({length: 9}, () => {
                 let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
                 return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
             })}
         </div>
         <div class="hidden sm:absolute sm:top-10 sm:left-[10%] sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-y-10 sm:w-1/4 lg:hidden">
-            {Array.from({length: 9}, (_, index) => {
+            {Array.from({length: 9}, () => {
                 let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
                 return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
             })}
         </div> 
         <div class="hidden lg:absolute lg:top-24 lg:left-[750px] lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:gap-y-16 lg:w-1/4">
-            {Array.from({length: 16}, (_, index) => {
+            {Array.from({length: 16}, () => {
                 let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
                 return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
             })}

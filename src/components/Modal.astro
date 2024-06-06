@@ -178,7 +178,7 @@ const { targets } = Astro.props;
 ---
 
 <!-- Main modal -->
-{proyects.map(({ slide, carousel, target, title, sortDescription }) => (
+{proyects.map(({ target }) => (
     targets === target ? 
         <div id={`${target}-modal`} class="relative p-4 w-full max-w-md max-h-full">
             <!-- Modal content -->

@@ -8,7 +8,7 @@ Hello there! 👋 I'm a passionate full-stack JavaScript developer with a keen f
 pnpm install
 ```
 
-# [Portfolio Jhonny](https://jhonnyuruena.com/) &middot; ![GitHub watchers](https://img.shields.io/github/watchers/jhonnyrra/portfolio-jhonny) ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/jhonnyrra) ![GitHub License](https://img.shields.io/github/license/jhonnyrra/portfolio-jhonny)
+# [Portfolio Jhonny](https://jhonnyuruena.com/) &middot; ![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat) ![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat) ![GitHub watchers](https://img.shields.io/github/watchers/jhonnyrra/portfolio-jhonny) ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/jhonnyrra) ![GitHub License](https://img.shields.io/github/license/jhonnyrra/portfolio-jhonny)
 
 >  **A small idea of the interface**
 
