@@ -1,22 +1,42 @@
 ---
+// import SpeedInsights from '@vercel/speed-insights/astro';
 import Container from '../components/Container.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+
 interface Props {
 	title: string;
 	description: string;
 }
 
-const { title, description} = Astro.props;
+const { title, description } = Astro.props;
 ---
 
+<!-- <SpeedInsights /> -->
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta property="og:image" content="https://jhonnyuruena.vercel.app/Pictures/landingAll.avif">
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://jhonnyuruena.vercel.app">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Jhonny Urueña - Web Developer and Programmer with +5 years of experience">
+		<meta property="og:description" content="Hire Jhonny to create your web or mobile application. Web Developer and Content Creator. Specialized in creating unique applications.">
+		<meta property="og:image" content="https://jhonnyuruena.vercel.app/Pictures/landingAll.avif">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content="jhonnyuruena.vercel.app">
+		<meta property="twitter:url" content="https://jhonnyuruena.vercel.app">
+		<meta name="twitter:title" content="Jhonny Urueña - Web Developer and Programmer with +5 years of experience">
+		<meta name="twitter:description" content="Hire Jhonny to create your web or mobile application. Web Developer and Content Creator. Specialized in creating unique applications.">
+		<meta name="twitter:image" content="https://jhonnyuruena.vercel.app/Pictures/landingAll.avif">
+
+		<link rel="icon" type="image/svg+xml" href="/Files/lo.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link href="https://fonts.cdnfonts.com/css/winternight" rel="stylesheet">
 		<link href="https://fonts.cdnfonts.com/css/diediedie" rel="stylesheet">
@@ -92,6 +112,7 @@ const { title, description} = Astro.props;
 			<slot>MeansWhile charge...</slot>
 		</Container>
 		<Footer />
+		<!-- <SpeedInsights/> -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js" />
 	</body>
 </html>
