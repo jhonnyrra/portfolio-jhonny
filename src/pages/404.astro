@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+const thisisfine = "/Pictures/thisisfine.jpg";
+import Layout from '../layouts/Layout.astro';
+import ContactMe from '../components/ContactMe.astro';
+import Container from '@/components/Container.astro';
+---
+<Layout
+	title={`Jhonny Urueña - I think the URL you are trying to access is not available(¬_¬")`}
+	description="Url or content not available. Back to main page."
+>
+	<Container class="bg-secondary shadow-[inset_0px_10px_25px_0px_#272b36] relative top-4" >
+        <div class="absolute left-[55%] top-4 grid grid-cols-3 grid-rows-3 gap-y-6 w-1/2 sm:hidden">
+            {Array.from({length: 9}, () => {
+                let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
+                return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
+            })}
+        </div>
+        <div class="hidden sm:absolute sm:top-10 sm:left-[10%] sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-y-10 sm:w-1/4 lg:hidden">
+            {Array.from({length: 9}, () => {
+                let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
+                return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
+            })}
+        </div> 
+        <div class="hidden lg:absolute lg:top-24 lg:left-[750px] lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:gap-y-16 lg:w-1/4">
+            {Array.from({length: 16}, () => {
+                let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
+                return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
+            })}
+        </div>
+        <p class="text-[10rem] text-skin text-center relative top-0 sm:text-[15rem]">404</p>
+        <Image
+            src={thisisfine}
+            alt="A picture to meme this is fine."
+            width="1200"
+            height="846"
+            class="m-auto w-[600px] h-[423px] md:w-[1200px] md:h-[846px]"
+        />
+	</Container>
+	<ContactMe
+		title="Jhonny Urueña.- Contact me"
+		description="Talk to Jhonny for know him more"
+	/>
+</Layout>

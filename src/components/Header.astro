@@ -1,0 +1,178 @@
+---
+import Nav from '@/components/Nav.astro';
+import Logo from './icons/Logo.astro';
+import ThemeToggle from "./ThemeToggle.astro"
+
+const navItems = [
+    {
+        title: "Proyects",
+        label: "proyects",
+        url: "/#proyects",
+    },
+    {
+        title: "About Me",
+        label: "about-me",
+        url: "/#about",
+    },
+    {
+        title: "Experience",
+        label: "experience",
+        url: "/#experience",
+    },
+    {
+        title: "Contact",
+        label: "contact",
+        url: "/#contact",
+    },
+]
+---
+
+<div class="containerNav w-full h-15 flex justify-between sticky top-5 mx-auto z-50 sm:rounded-full sm:top-1 sm:m-auto">
+    <a href="/" role="link" title="Welcome Again!">
+        <Logo class="logo relative w-14 h-14 left-5 sm:absolute sm:left-1/10 sm:top-2.5 lg:top-0 lg:w-20 lg:h-20 lg:left-10" />
+    </a>
+    <nav class="m-auto flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 relative top-2">
+    {
+        navItems.map(({title, label, url}) => (
+            <div class="shortcut hidden sm:block sm:pb-5 ">
+                <a
+                    class="relative block px-2 py-4 text-base transition hover:text-yellow-500 dark:hover:text-skin lg:text-xl"
+                    aria-label={label}
+                    href={url}
+                >
+                    {title}
+                </a>
+            </div>
+        ))
+    }
+    <ThemeToggle />
+    </nav>
+    <div class="p-4 sm:hidden">
+        <label 
+            class="justify-self-end flex flex-col w-[40px] h-[27px] absolute top-3 right-3 sm:hidden" 
+            for="check" 
+        >
+            <input
+                id="check"
+                type="checkbox"
+                data-collapse-toggle="navbar-default"
+                aria-controls="navbar-default"
+                aria-expanded="false"
+                data-modal-target="default-modal"
+                data-modal-toggle="default-modal"
+            />
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+
+
+    <!--  -->
+
+
+
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default" >
+        <Nav />
+    </div>
+</div>
+
+<style>
+    .containerNav {
+        animation: enhance-header linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 200px;
+    }
+    @keyframes enhance-header {
+        to {
+            background: rgb(240, 191, 108, .4);
+            backdrop-filter: blur(5px);
+            font-size: 18px;
+        }
+    }
+    label span {
+        background: #f0bf6c;
+        border-radius:10px;
+        height:3px;
+        margin: 3px 0;
+        z-index: 30;
+        transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        transform:background-color 0.5s ease;
+        animation: change-color linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 100px;
+    }
+    @keyframes change-color {
+        to {
+            background: #2C303C;
+        }
+    }
+    .shortcut {
+        animation: change-shortcut linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 100px;
+    }
+    @keyframes change-shortcut {
+        to {
+            color: #2C303C;
+            font-weight: 600;
+        }
+    }
+    .logo:hover{
+        filter: brightness(0) 
+        saturate(100%) 
+        invert(100%) 
+        sepia(0%) 
+        saturate(7488%) 
+        hue-rotate(49deg) 
+        brightness(102%) 
+        contrast(104%);
+    }
+    .logo {
+        animation: change-fill linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 100px;
+    }
+    @keyframes change-fill {
+        to {
+            filter: brightness(0) 
+            saturate(100%) 
+            invert(18%) 
+            sepia(4%) 
+            saturate(2336%) 
+            hue-rotate(49deg) 
+            brightness(102%) 
+            contrast(97%);
+        }
+    }
+    
+    span:nth-of-type(1) {
+        width:50%;
+    }
+    span:nth-of-type(2) {
+        width:100%;
+    }
+    span:nth-of-type(3) {
+        width:75%;
+    }
+    input[type="checkbox"]{
+        display:none;
+    }
+    input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+        transform-origin:bottom;
+        transform:rotatez(45deg) translate(3px, 0px);
+        background-color: #2C303C;
+    }
+    input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+        transform-origin:top;
+        transform:rotatez(-45deg);
+        background-color: #2C303C;
+    }
+    input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+        transform-origin:bottom;
+        width:50%;
+        transform: translate(16px, -2px) rotatez(45deg);
+        background-color: #2C303C;
+    }
+</style>

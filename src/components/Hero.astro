@@ -1,0 +1,240 @@
+---
+import { Image } from 'astro:assets';
+import Button from './Button.astro';
+import Badge from "./Badge.astro"
+import X from './icons/X.astro';
+import Github from './icons/Github.astro';
+import Linkedin from './icons/Linkedin.astro';
+import Cv from './icons/Cv.astro';
+import Line from './Line.astro';
+
+const pictures = "/Pictures/pictures.png";
+
+const iconsItem = [
+    {
+        alt: "X icon, before Twitter",
+        src: "https://twitter.com/jhonnyrra",
+        title: "Twitter or just X.",
+        Component: X,
+    },
+    {
+        alt: "github icon",
+        src: "https://github.com/jhonnyrra",
+        title: "Github",
+        Component: Github,
+    },
+    {
+        alt: "linkedin icon",
+        src: "https://www.linkedin.com/in/jhonny-israel-urue%C3%B1a-hernandez/",
+        title: "Linkedin",
+        Component: Linkedin,
+    },
+    {
+        alt: "Download my CV",
+        src: "../../Files/Curriculum_Jhonny_urueña.pdf",
+        title: "Curriculum Vitae",
+        Component: Cv,
+    },
+]
+---
+
+<main class="flex flex-col justify-center relative sm:flex-row sm:justify-between sm:pb-48 sm:-mt-20 md:mb-[-83px] lg:pb-36 lg:mb-0">
+    <div class="pt-10 px-2 sm:p-0 sm:flex-auto sm:w-3/4 sm:pt-28 lg:relative lg:left-10 lg:max-w-2xl">
+        <h1 class="text-xl mb-3 p-3 text-center sm:text-2xl sm:text-left lg:text-4xl">I´M <span class="text-skin font-sans font-semibold text-4xl sm:text-6xl lg:text-7xl">Jhonny Urueña</span></h1>
+        <p class="text-xl mb-5 w-full p-3 sm:text-2xl sm:w-3/5 lg:text-4xl">
+            <span class="text-skin">+</span>5 years of experience as a 
+            <span class="text-skin">software developer "Backend and Frontend"</span>.
+        </p> 
+        <div class="absolute -z-20 flex flex-col animate-[move_19s_infinite] sm:animate-[movesm_19s_infinite] lg:animate-[movelg_19s_infinite] xl:animate-[movexl_19s_infinite]">
+            <p class="text-sm mb-5 w-full p-3 sm:text-xl lg:text-1xl lg:leading-none animate-[white-out_10s_infinite]">
+                <span class="text-skin">
+                    -
+                </span>
+                high performance 
+                <span class="text-skin">
+                    website
+                </span>
+                builder
+            </p>
+            <p class="text-sm mb-5 w-full p-3 sm:text-xl lg:text-1xl lg:leading-none animate-[white-out_10s_infinite]">
+                <span class="text-skin">
+                    -
+                </span>
+                Creativity in 
+                <span class="text-skin">
+                    coding solutions.
+                </span>
+            </p>
+            <p class="text-sm mb-5 w-full p-3 sm:text-xl lg:text-1xl lg:leading-none animate-[white-out_10s_infinite]">
+                <span class="text-skin">
+                    -
+                </span>
+                <span class="text-skin">
+                    Empathy 
+                </span>
+                towards users.
+            </p>   
+            <p class="text-sm mb-5 w-full p-3 sm:text-xl lg:text-1xl lg:leading-none animate-[white-out_10s_infinite]">
+                <span class="text-skin">
+                    -
+                </span>
+                Collaborative mindset.
+            </p>
+            <p class="text-sm mb-5 w-full p-3 sm:text-xl lg:text-1xl lg:leading-none animate-[white-out_10s_infinite]">
+                <span class="text-skin">
+                    -
+                </span>
+                Strong 
+                <span class="text-skin">
+                    communication skills.
+                </span>
+            </p>
+            <p class="text-sm mb-5 w-full p-3 sm:text-xl lg:text-1xl lg:leading-none animate-[white-out_10s_infinite]">
+                <span class="text-skin">
+                    -
+                </span>
+                Problem-solving prowess.
+            </p>  
+        </div>
+        
+        <div class="after:content-[''] after:-z-10 after:absolute after:h-[100vmin] after:w-full after:bg-primary after:-translate-y-[108vmin] before:bg-primary before:content-[''] before:-z-10 before:absolute before:h-[110vmin] before:w-full before:-translate-y-[2vmin] sm:hidden" />
+
+        <div class="sm:after:content-[''] sm:after:-z-10 sm:after:absolute sm:after:h-[50vmin] sm:after:w-[75vmin] sm:after:bg-primary sm:after:-translate-y-[53vmin] sm:after:left-2 sm:before:content-[''] sm:before:-z-10 sm:before:absolute sm:before:h-[41vmin] sm:before:w-[75vmin] sm:before:bg-primary sm:before:translate-y-[1vmin] sm:before:left-2 md:hidden" />
+
+        <div class="md:after:content-[''] md:after:-z-10 md:after:absolute md:after:h-[50vmin] md:after:w-[75vmin] md:after:bg-primary md:after:-translate-y-[53vmin] md:before:content-[''] md:before:-z-10 md:before:absolute md:before:h-[41vmin] md:before:w-[75vmin] md:before:bg-primary md:before:translate-y-[1vmin] lg:hidden" />
+    
+        <div class="lg:after:content-[''] lg:after:-z-10 lg:after:absolute lg:after:h-[50vmin] lg:after:w-[75vmin] lg:after:bg-primary lg:after:-translate-y-[53vmin] lg:before:content-[''] lg:before:-z-10 lg:before:absolute lg:before:h-[28vmin] lg:before:w-[75vmin] lg:before:bg-primary lg:before:translate-y-[1vmin] xl:hidden" />
+    
+        <div class="xl:after:content-[''] xl:after:-z-10 xl:after:absolute xl:after:h-[60vmin] xl:after:w-11/12 xl:after:bg-primary xl:after:-translate-y-[64vmin] xl:before:content-[''] xl:before:-z-10 xl:before:absolute xl:before:h-[100vmin] xl:before:w-11/12 xl:before:bg-primary 2xl:hidden" />
+
+        <div class="2xl:after:content-[''] 2xl:after:-z-10 2xl:after:absolute 2xl:after:h-[50vmin] 2xl:after:w-[45vmin] 2xl:after:bg-primary 2xl:after:-translate-y-[53vmin] 2xl:before:content-[''] 2xl:before:-z-10 2xl:before:absolute 2xl:before:h-[25vmin] 2xl:before:w-[45vmin] 2xl:before:bg-primary" />
+        
+        <Button 
+            class="ml-3 text-skin hover:text-white border-skin hover:bg-skin focus:ring-4 focus:outline-none focus:ring-skin font-medium rounded-lg px-2 py-2 me-2 mt-2 dark:border-skin dark:text-skin dark:hover:text-primary hover:font-semibold dark:hover:bg-skin dark:focus:ring-yellow-900 border-[2px] pb-1 text-sm sm:text-base sm:border-[3px] sm:mt-5 lg:text-xl" 
+            href="mailto:jhonnyrra@gmail.com"
+        >Contact Me</Button>
+        <Badge>Available to work</Badge>
+    </div>
+    <div class="mx-auto sm:right-0 sm:absolute sm:bottom-36 md:bottom-60 lg:right-1 lg:bottom-16">
+        <Image
+            src={pictures}
+            alt="A picture to Jhonny Urueña." 
+            width="400" 
+            height="400" 
+            class="w-[230px] h-64 sm:w-[350px] sm:h-[400px] md:w-[400px] md:h-[450px] relative top-1 mt-5 sm:top-40 lg:top-20 lg:w-[500px] lg:h-[600px] lg:-right-4"
+        />
+        <Line class="bg-skin rotate-90 w-32 absolute bottom-[130px] -right-2 sm:right-1.5 sm:bottom-30 sm:w-36 lg:absolute lg:bottom-72" />
+        <ul class="w-60 flex flex-row justify-between absolute bottom-5 m-auto sm:w-0 sm:right-[61px] sm:gap-4 sm:-bottom-36 sm:items-end sm:flex-col lg:-right-30 lg:bottom-[-29px]">
+            {
+                iconsItem.map(({alt, src, title, Component}) =>(
+                    <li>
+                        <a 
+                            href={src} 
+                            role="link"
+                            target="_blank" 
+                            title={title} 
+                            rel="noopener noreferrer"
+                        >
+                            {Component === Cv ? 
+                            <Component 
+                                alt= {alt} 
+                                class="hover:fill-skin cursor-pointer fill-current relative w-9 h-9 bottom-1 sm:w-12 sm:h-12 sm:left-2 lg:w-14 lg:h-14 lg:left-3"
+                            /> : 
+                            <Component 
+                                alt= {alt} 
+                                class="hover:fill-skin cursor-pointer fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
+                            />}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</main>
+
+<style>
+    @keyframes move {
+        15% {
+            transform: translatey(-40px);
+            opacity: 1;
+        }
+        30% {
+            transform: translatey(-103px);
+        }
+        45% {
+            transform: translatey(-166px);
+        }
+        60% {
+            transform: translatey(-232px);
+        }
+        75% {
+            transform: translatey(-295px);
+        }
+        90% {
+            transform: translatey(-360px);
+        }
+    }
+    @keyframes movesm {
+        15% {
+            transform: translatey(-35px);
+            opacity: 1;
+        }
+        30% {
+            transform: translatey(-103px);
+        }
+        45% {
+            transform: translatey(-176px);
+        }
+        60% {
+            transform: translatey(-248px);
+        }
+        75% {
+            transform: translatey(-322px);
+        }
+        90% {
+            transform: translatey(-396px);
+        }
+    }
+    @keyframes movelg {
+        15% {
+            transform: translatey(-30px);
+            opacity: 1;
+        }
+        30% {
+            transform: translatey(-95px);
+        }
+        45% {
+            transform: translatey(-158px);
+        }
+        60% {
+            transform: translatey(-220px);
+        }
+        75% {
+            transform: translatey(-287px);
+        }
+        90% {
+            transform: translatey(-352px);
+        }
+    }
+    @keyframes movexl {
+        15% {
+            transform: translatey(-35px);
+            opacity: 1;
+        }
+        30% {
+            transform: translatey(-100px);
+        }
+        45% {
+            transform: translatey(-163px);
+        }
+        60% {
+            transform: translatey(-228px);
+        }
+        75% {
+            transform: translatey(-290px);
+        }
+        90% {
+            transform: translatey(-357px);
+        }
+    }
+</style>

@@ -1,0 +1,59 @@
+---
+import Line from "./Line.astro";
+
+const cards = [
+    {   
+        row: 1,
+        date: "2024",
+        title: "Frontend Current...",
+        company: "ScriptForze",
+        description: "Proficiently developed and generated vital components for an e-commerce company, skillfully integrating the interface with the company's distinct business model. Expertly managed and meticulously documented the E-commerce API using the Swagger tool, ensuring clarity and accessibility for all stakeholders. Employed Next.js, Tailwind CSS, and GraphQL to craft a modern and efficient website, while also providing maintenance support for the back office, ensuring seamless functionality across the platform.",
+    },
+    {   
+        row: 2,
+        date: "2021",
+        title: "Senior Backend",
+        company: "Colegium, Chile",
+        description: "With a strong focus on development and error correction, I have driven operational enhancements within the company's intranet, resulting in notable cost savings and enhanced profit margins. My adept problem-solving skills have been instrumental in identifying issues, analyzing information, and implementing effective solutions. Noteworthy accomplishments include the design and construction of a Grafana Labs API-powered dashboard for comprehensive performance measurement across various company sections via Jira. Additionally, I have played a pivotal role in assisting frontend efforts, particularly in refining and optimizing the performance and quality of the new VueJS-based intranet interface, contributing significantly to its continuous improvement.",
+    },
+    {   
+        row: 3,
+        date: "2019",  
+        title: "Web FullStack",
+        company: "Mr Domii",
+        description: "Proficiently served as a backend developer for an e-commerce website, leveraging Laravel framework and PostgreSQL database. Ensured robustness and clarity through comprehensive Swagger documentation, while also prioritizing unit testing and adherence to best practices in software development.",
+    },
+]
+---
+
+<section id="experience" class="sm:relative sm:bottom-4 lg:top-[130px] lg:pb-40">
+    <h1 class="text-4xl pt-[35px] text-center font-sans font-semibold relative bottom-14 sm:text-left sm:text-6xl sm:pl-7">
+        Experience
+    </h1>
+    <article class="-mb-20 relative grid grid-rows-1 sm:w-full sm:gap-4 sm:top-0 sm:grid-row-3">
+    {
+        cards.map(({ date, title, company, description, row }) => ( 
+            <div class={`row-start-${row} grid grid-cols-2 grid-rows-1 sm:relative sm:grid-cols-5 sm:grid-rows-1 sm:gap-4`}>
+                <div class="bg-[#707075] relative top-6 col-start-1 rotate-90 w-20 h-8 right-0 shadow-[-25px_0px_25px_5px_#29292f] after:contents-[''] after:absolute after:border-[16px] after:border-transparent after:left-20 after:border-l-[#707075] after:top-0 sm:col-start-2 sm:col-row-1 sm:left-[-100px] sm:rotate-0 sm:h-10 sm:after:border-[20px] sm:top-0">
+                    <time datetime={date} class="ml-3 w-5 h-20 text-xl absolute left-2 top-0.5 sm:top-[0.5rem]">
+                        {date}
+                    </time>
+                </div>
+                <span class="relative col-start-1 left-[26px] top-20 w-7 h-7 bg-skin rounded-full border-2 border-[#d8ab61] shadow-[0px_0px_25px_5px_#d8ab61] hover:bg-yellow-400 hover:shadow-none sm:absolute sm:col-start-2 sm:col-row-1 sm:top-[6px] sm:left-[10px]" />
+                <Line class="relative col-start-1 right-[40px] top-[174px] w-40 bg-white rotate-90 sm:w-28 sm:right-[32px] sm:top-[49px] sm:col-start-2 sm:row-start-2 sm:row-span-3 md:w-[8.5rem] md:right-[45px] md:top-16 lg:w-48 lg:right-[72px] lg:top-24" />
+                <div class="relative w-[55%] text-pretty bottom-16 col-start-1 col-span-2 left-[4.5rem] sm:col-start-2 sm:col-span-3 sm:w-full sm:bottom-[100px] sm:left-[50px] sm:-mb-10">
+                    <h1 class="text-xl font-semibold left-2 top-0.5 sm:left-10">
+                        {title}
+                    </h1>
+                    <h2 class="text-skin only:text-base left-2 top-0.5">
+                        {company}
+                    </h2>
+                    <div class="text-gray-400 text-wrap w-[135%] pt-3 sm:w-full">
+                        {description}
+                    </div>
+                </div>
+            </div>
+        ))
+    }
+    </article>
+</section>
