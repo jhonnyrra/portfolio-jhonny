@@ -2,11 +2,13 @@
 
 Hello there! 👋 I'm a passionate full-stack JavaScript developer with a keen focus on crafting seamless user experiences and driving innovation through technology. **With a solid foundation in React, Next.js, and Astro**, I thrive in both developing new implementations and refining existing solutions to perfection.
 
+[jhonnyurueña.com](https://jhonnyurueña.com)
+
 ```sh
 pnpm install
 ```
 
-# [Portfolio Jhonny](https://jhonnyuruena.com/) &middot; ![GitHub watchers](https://img.shields.io/github/watchers/jhonnyrra/portfolio-jhonny) ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/jhonnyrra) ![GitHub License](https://img.shields.io/github/license/jhonnyrra/portfolio-jhonny)
+# [Portfolio Jhonny](https://jhonnyuruena.com/) &middot; ![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat) ![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat) ![GitHub watchers](https://img.shields.io/github/watchers/jhonnyrra/portfolio-jhonny) ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/jhonnyrra) ![GitHub License](https://img.shields.io/github/license/jhonnyrra/portfolio-jhonny)
 
 >  **A small idea of the interface**
 

@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Skills from '../components/Skills.astro';
+import Projects from '../components/Projects.astro';
+import Experience from '../components/Experience.astro';
+import Testimonial from '../components/Testimonial.astro';
+import ContactMe from '../components/ContactMe.astro';
+import Container from '@/components/Container.astro';
+---
+
+<Layout
+	title="Jhonny Urueña - Web Developer and Programmer with +5 years of experience"
+	description="Hire Jhonny to create your web or mobile application. Web Developer and Content Creator. Specialized in creating unique applications."
+>
+	<Hero />
+	<Container class="bg-secondary pt-10 lg:pt-32 shadow-[inset_0px_10px_25px_0px_#272b36] relative top-1" >
+		<Projects
+			title="Jhonny Urueña.- Some Porfolios"
+			description="Proyects completed in elapsed time"
+		/>
+		<AboutMe
+			title="Jhonny Urueña.- About Me"
+			description="Skills, likes and summary of who Jhonny is"
+		/>
+		<Skills />
+	</Container>
+	<Experience
+		title="Jhonny Urueña.- Experience"
+		description="Some experiences throughout Jhonny´s life"
+	/>
+	<Testimonial />
+	<ContactMe
+		title="Jhonny Urueña.- Contact me"
+		description="Talk to Jhonny for know him more"
+	/>
+</Layout>

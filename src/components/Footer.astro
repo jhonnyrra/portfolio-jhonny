@@ -1,0 +1,61 @@
+---
+import X from './icons/X.astro';
+import Github from './icons/Github.astro';
+import Linkedin from './icons/Linkedin.astro';
+import StackOF from './icons/StackOF.astro';
+import Line from './Line.astro';
+
+const iconsItem = [
+    {
+        alt: "X icon, before Twitter",
+        src: "https://twitter.com/jhonnyrra",
+        title: "Twitter or just X.",
+        Component: X,
+    },
+    {
+        alt: "github icon",
+        src: "https://github.com/jhonnyrra",
+        title: "Github",
+        Component: Github,
+    },
+    {
+        alt: "linkedin icon",
+        src: "https://www.linkedin.com/in/jhonny-israel-urue%C3%B1a-hernandez/",
+        title: "Linkedin",
+        Component: Linkedin,
+    },
+    {
+        alt: "stack overflow icon",
+        src: "https://stackoverflow.com/users/2871682/jhonny-israel-urue%c3%b1a-hernandez",
+        title: "Stack Overflow",
+        Component: StackOF,
+    },
+]
+---
+
+<article class="bg-secondary shadow-[inset_0px_0px_15px_5px_#34343b] lg:m-auto lg:max-w-screen-xl">
+    <ul class="flex flex-row gap-4 justify-center pt-12 relative bottom-16">
+        <Line class="bg-skin absolute left-0 w-1/5 mt-3.5 sm:w-2/6 lg:w-2/5" />
+        {
+            iconsItem.map(({alt, src, title, Component}) =>(
+                <li>
+                    <a 
+                        href={src} 
+                        role="link"
+                        target="_blank" 
+                        title={title} 
+                        rel="noopener noreferrer"
+                    >
+                        <Component 
+                            alt= {alt} 
+                            class="cursor-pointer hover:fill-skin fill-current w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
+                        />
+                    </a>
+                </li>
+            ))
+        }
+        <Line class="bg-skin absolute right-0 w-1/5 mt-3.5 sm:w-2/6 lg:w-2/5" />
+    </ul>
+    <h2 class="text-skin text-center px-5 text-lg pb-5 sm:pb-7 sm:text-2xl lg:text-4xl">"Thanks for Scrolling"</h2>
+    <h2 class="text-skin h-5 text-center px-5 text-lg pb-20 sm:text-2xl lg:text-4xl">© 2024 Jhonny.</h2>
+</article>
