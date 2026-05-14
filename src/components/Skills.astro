@@ -46,8 +46,8 @@ const cards = {
             component: "/SkillsIcon/javascript.svg",
         },
         {
-            title: "GraphQL",
-            component: "/SkillsIcon/graphql.svg",
+            title: "Astro",
+            component: "/SkillsIcon/Astro_dark.svg",
         },
         {
             title: "PNPm",
@@ -95,13 +95,13 @@ const cards = {
         },
     ],
 };
-
 ---
 
 <section class="w-11/12 m-auto pt-28 lg:-mb-36">
     <h1 class="text-white pb-5 text-center font-sans font-semibold text-3xl sm:pb-10 sm:text-5xl lg:text-6xl lg:py-16">
         My Skills
     </h1>
+
     <div class="grid gap-y-8 grid-cols-2 sm:grid-cols-4 w-full h-full">
         {cards.cardsArray.map(({title, component}) => {
             const borderColor = Math.random() < 0.5 ? 'outline outline-1 outline-skin' : '';
@@ -117,11 +117,12 @@ const cards = {
             );
         })}
     </div>
+
     <div
         data-collapse="animated-collapse-1"
-        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+        class="overflow-hidden transition-all duration-300 ease-in-out"
     >
-        <div class="grid gap-y-8 grid-cols-2 pt-8 sm:grid-cols-4">
+        <div class="grid gap-y-8 grid-cols-2 pt-8 sm:grid-cols-4 -h-12">
             {cards.cardsArrayTwo.map(({title, component}) => {
                 const borderColor = Math.random() < 0.5 ? 'outline outline-1 outline-skin' : '';
                 return (
@@ -129,7 +130,7 @@ const cards = {
                         title={title}
                         alt={title} 
                         href={component}
-                        classContainer={`${borderColor} bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-8 w-32 md:w-40 md:h-40 h-32 lg:w-52 lg:h-52 rounded-3xl hover:bg-skin items-center`}
+                        classContainer={`${borderColor} bg-primary shadow-[0px_0px_25px_10px_#272b36] justify-self-center p-8 w-32 md:w-40 h-32 md:h-40 lg:w-52 lg:h-52 rounded-3xl hover:bg-skin items-center`}
                         classImg="m-auto w-12 h-12 lg:w-20 lg:h-20"
                         classTitle="dark:text-white text-center text-xs pt-3 lg:text-xl lg:pt-8"
                     />
@@ -137,6 +138,7 @@ const cards = {
             })}
         </div>
     </div>
+
     <div class="hidden w-3/4 m-auto pt-8 sm:grid sm:grid-cols-3">
         {cards.cardsArrayThree.map(({title, component}) => {
             const borderColor = Math.random() < 0.5 ? 'outline outline-1 outline-skin' : '';
@@ -152,6 +154,7 @@ const cards = {
             );
         })}
     </div>
+
     <div class="w-1/2 m-auto pt-8 grid gap-y-8 grid-cols-1 sm:grid-cols-2">
         {cards.cardsArrayFour.map(({title, component}) => {
             const borderColor = Math.random() < 0.5 ? 'outline outline-1 outline-skin' : '';
@@ -167,21 +170,26 @@ const cards = {
             );
         })}
     </div>
+
     <div class="hidden sm:flex sm:justify-center sm:relative sm:top-10">
         <button
+            id="collapse-button"
             class="relative flex items-center w-60 p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-skin text-skin rounded-t-1 group text-dark-500"
             data-collapse-target="animated-collapse-1"
         >
-            <span>Do you see more?</span>
-            <i class="absolute right-5 text-base transition-transform group-open:rotate-180">
-                <span
-                    class="ms-auto transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
+            <span id="collapse-text">Do you see more?</span>
+
+            <i class="absolute right-5 text-base transition-transform duration-300">
+                <span class="ms-auto transition-transform duration-300 ease-in-out motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
                     <svg
+                        id="arrow-icon"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
-                        stroke="currentColor">
+                        stroke="currentColor"
+                        class="transition-transform duration-300"
+                    >
                         <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -191,23 +199,59 @@ const cards = {
                 </span>
             </i>
         </button>
-    </div>  
+    </div>
+
     <div class="relative bottom-32 left-[80%] grid grid-cols-2 grid-rows-2 gap-y-6 w-1/4 sm:hidden">
         {Array.from({length: 4}, () => {
             let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
             return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
         })}
     </div>
+
     <div class="hidden sm:relative sm:bottom-32 sm:left-[80%] sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-y-10 sm:w-1/4 lg:hidden">
         {Array.from({length: 9}, () => {
             let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
             return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
         })}
     </div>  
+
     <div class="hidden lg:relative lg:bottom-32 lg:left-[750px] lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:gap-y-16 lg:w-1/4">
         {Array.from({length: 16}, () => {
             let a = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
             return <div class={`w-${a} h-${a} bg-skin bg-opacity-25 rounded-full`} />;
         })}
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const button = document.querySelector(
+                '[data-collapse-target="animated-collapse-1"]'
+            );
+
+            const collapse = document.querySelector(
+                '[data-collapse="animated-collapse-1"]'
+            );
+
+            const icon = document.getElementById("arrow-icon");
+            const text = document.getElementById("collapse-text");
+
+            if (!button || !collapse || !icon || !text) return;
+
+            let isOpen = false;
+
+            button.addEventListener("click", () => {
+                isOpen = !isOpen;
+
+                if (isOpen) {
+                    collapse.style.height = collapse.scrollHeight + "px";
+                    icon.classList.add("rotate-180");
+                    text.textContent = "See less";
+                } else {
+                    collapse.style.height = "0px";
+                    icon.classList.remove("rotate-180");
+                    text.textContent = "Do you see more?";
+                }
+            });
+        });
+    </script>
 </section>
